@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+    <meta http-equiv="Content-Security-Policy" content="
+  script-src 'self' 'unsafe-inline' https://*.vercel-scripts.com;
+  connect-src 'self' https://*.vercel-insights.com https://vitals.vercel-insights.com;
+    ">
     <meta name="description" content="Portfolio of Oliwier Mako, a web designer and developer building fast, high-converting landing pages and personal-brand websites for founders.">
     <meta name="theme-color" content="#f4f4f4">
     <meta property="og:title" content="Oliwier Mako | Web Designer & Developer">
@@ -19,6 +22,8 @@
     <link id="site-favicon" rel="icon" href="./images/favicon/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+
 
 </head>
 <body>
