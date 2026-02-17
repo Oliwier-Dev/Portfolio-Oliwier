@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="
-  script-src 'self' 'unsafe-inline' https://*.vercel-scripts.com;
-  connect-src 'self' https://*.vercel-insights.com https://vitals.vercel-insights.com;
-    ">
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://*.vercel-scripts.com;
+    style-src 'self';
+    img-src 'self' data: https:;
+    font-src 'self' data:;
+    connect-src 'self' https://*.vercel-insights.com https://vitals.vercel-insights.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+  ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
-  <meta name="description" content="Privacy Policy for Oliwier Mako's portfolio website, including information about local storage usage for theme preferences.">
+  <meta name="description" content="Privacy Policy for Oliwier Mako's portfolio website, including information about local storage usage and analytics.">
   <title>Privacy Policy</title>
   <link rel="stylesheet" href="legal.css" />
   <script defer src="/_vercel/speed-insights/script.js"></script>
-
-
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <main id="main">
@@ -21,25 +30,31 @@
       <section id="privacy-policy">
         <h1>Privacy Policy</h1>
 
-        <p><strong>Effective date:</strong> February 16, 2026</p>
+        <p><strong>Effective date:</strong> February 17, 2026</p>
 
         <h2>Summary</h2>
-        <p>This website is a simple portfolio. I do not collect personal data for marketing or advertising. The only data saved locally is your theme preference (light or dark) so the site remembers your choice.</p>
+        <p>This website is a simple portfolio. I do not collect personal data for marketing or advertising. The only data saved locally is your theme preference (light or dark) so the site remembers your choice. The site also uses privacy-focused analytics and performance monitoring tools provided by Vercel.</p>
 
         <h2>What data we collect</h2>
-        <p>We do not collect names, emails, or other personal information. The site only stores a small value in your browser (localStorage) to remember whether you chose light or dark mode.</p>
+        <p>I do not collect names, emails, or other directly identifiable personal information through this site.</p>
+        <p>The site stores a small value in your browser (localStorage) to remember whether you chose light or dark mode.</p>
+        <p>The site also uses Vercel Web Analytics and Vercel Speed Insights. These tools collect anonymized technical information such as page views, browser type, device type, approximate location (country level), and performance metrics. No cookies are used for analytics purposes.</p>
 
         <h2>How we use data</h2>
-        <p>The theme preference is used only to improve your viewing experience. It is never shared, sold, or used for tracking across sites.</p>
+        <p>The theme preference is used only to improve your viewing experience.</p>
+        <p>Analytics and performance data are used to understand how the site is used and to improve performance, reliability, and user experience. This data is not sold or used for advertising.</p>
 
         <h2>Cookies and local storage</h2>
-        <p>This site does not use tracking cookies or analytics tools. A single local storage entry remembers your theme preference. If you clear your browser data, this preference will be removed.</p>
+        <p>This site does not use tracking cookies. A single local storage entry remembers your theme preference.</p>
+        <p>Analytics provided by Vercel do not rely on cookies and are designed to be privacy-focused.</p>
+        <p>If you clear your browser data, your saved theme preference will be removed.</p>
 
-        <h2>Third-party links</h2>
-        <p>The site links to third-party profiles (for example X, GitHub, Instagram). Those sites are separate and have their own privacy policies. I am not responsible for how those sites collect or handle data.</p>
+        <h2>Third-party services</h2>
+        <p>This site uses Vercel for hosting, analytics, and performance monitoring. Data processed through these services may be handled according to Vercel’s own privacy policies.</p>
+        <p>The site also links to third-party profiles (for example X, GitHub, Instagram). Those sites are separate and have their own privacy policies. I am not responsible for how those sites collect or handle data.</p>
 
         <h2>Security</h2>
-        <p>Because the site does not store personal data, there is very little risk. Still, standard best practices are followed for hosting and files. No personal information is stored on this site.</p>
+        <p>Because the site does not store personal data directly, risk exposure is minimal. Standard hosting and security practices are followed. No sensitive personal information is stored on this site.</p>
 
         <h2>Children</h2>
         <p>This site is not intended for children under 13. No personal data is knowingly collected from minors.</p>
@@ -47,7 +62,7 @@
         <h2>Policy changes</h2>
         <p>I may update this policy from time to time. Changes will be posted here with a new effective date.</p>
 
-        <p class="legal-last-updated">Last updated: February 16, 2026</p>
+        <p class="legal-last-updated">Last updated: February 17, 2026</p>
       </section>
     </div>
   </main>

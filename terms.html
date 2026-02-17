@@ -3,17 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="Content-Security-Policy" content="
-  script-src 'self' 'unsafe-inline' https://*.vercel-scripts.com;
-  connect-src 'self' https://*.vercel-insights.com https://vitals.vercel-insights.com;
-    ">
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://*.vercel-scripts.com;
+    style-src 'self';
+    img-src 'self' data: https:;
+    font-src 'self' data:;
+    connect-src 'self' https://*.vercel-insights.com https://vitals.vercel-insights.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+  ">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
-  <meta name="description" content="Terms of Service for Oliwier Mako's portfolio website, covering site usage, intellectual property, liability, and contact details.">
+  <meta name="description" content="Terms of Service for Oliwier Mako's portfolio website, covering site usage, intellectual property, liability, analytics, and contact details.">
   <title>Terms of Service</title>
   <link rel="stylesheet" href="legal.css" />
   <script defer src="/_vercel/speed-insights/script.js"></script>
-
-  
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <main id="main">
@@ -21,7 +30,7 @@
       <section id="terms-of-service">
         <h1>Terms of Service</h1>
 
-        <p><strong>Effective date:</strong> February 16, 2026</p>
+        <p><strong>Effective date:</strong> February 17, 2026</p>
 
         <h2>1. Agreement</h2>
         <p>These terms set the rules for using this website (the "Site"). By using the Site you agree to these terms. If you hire me for a project, we will agree on a separate written scope and contract for that work.</p>
@@ -35,25 +44,29 @@
         <h2>4. Intellectual Property</h2>
         <p>All content on the Site (design, text, images, code) is owned by me or used with permission. You may not copy, reuse, or redistribute Site content without written permission.</p>
 
-        <h2>5. No Warranty</h2>
+        <h2>5. Analytics and Performance Monitoring</h2>
+        <p>This Site uses Vercel Speed Insights and Vercel Web Analytics to measure performance and understand general usage patterns. These tools collect anonymized technical data such as page views, browser type, device type, and performance metrics. No cookies are used for analytics purposes and no personally identifiable information is intentionally collected through these tools.</p>
+        <p>By using the Site, you acknowledge that performance and usage data may be processed by Vercel for analytics and monitoring purposes.</p>
+
+        <h2>6. No Warranty</h2>
         <p>The Site and its content are provided “as is.” I do not guarantee the Site will be error-free, available at all times, or meet all your expectations. Use the Site at your own risk.</p>
 
-        <h2>6. Limitation of Liability</h2>
+        <h2>7. Limitation of Liability</h2>
         <p>I am not liable for indirect, special, or consequential damages. My total liability for any claim related to the Site or services is limited to the amount you paid for a specific service, if any.</p>
 
-        <h2>7. External Links</h2>
+        <h2>8. External Links</h2>
         <p>The Site links to third-party sites (for example X, GitHub, Instagram). I am not responsible for the content or practices of those sites.</p>
 
-        <h2>8. Termination</h2>
+        <h2>9. Termination</h2>
         <p>I may suspend or remove access to the Site or parts of it at any time for any reason. If we have a project contract, termination terms will be in that contract.</p>
 
-        <h2>9. Changes to Terms</h2>
+        <h2>10. Changes to Terms</h2>
         <p>I may update these terms. When changes are made the effective date will be updated. Continued use of the Site means you accept the updated terms.</p>
 
-        <h2>10. Governing Law</h2>
+        <h2>11. Governing Law</h2>
         <p>These terms are governed by the laws of Sweden to the extent allowed by law.</p>
 
-        <p class="legal-last-updated">Last updated: February 16, 2026</p>
+        <p class="legal-last-updated">Last updated: February 17, 2026</p>
       </section>
     </div>
   </main>

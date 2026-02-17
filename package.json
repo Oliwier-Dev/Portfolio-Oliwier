@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Oliwier-Dev/Portfolio-Oliwier#readme",
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "@vercel/speed-insights": "^1.3.1"
   }
 }
