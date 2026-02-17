@@ -1,7 +1,3 @@
-import { injectSpeedInsights } from '@vercel/speed-insights';
-
-injectSpeedInsights();
-
 // ===== UI ELEMENTS =====
 const ui = {
     switchThemeBtn:     document.getElementById('switchThemeBtn'),
