@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI FAQ Assistant</title>
+    <link rel="icon" type="svg" href="message.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+    <main>
+        <button id="use-btn" type="button" aria-label="Open chat usage guide">
+            <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-help-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 16v.01" /><path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>
+        </button>
+
+        <div id="helpPopup" class="help-popup" aria-hidden="true" role="dialog" aria-labelledby="help-title">
+            <div class="help-popup-panel">
+                <button id="closeHelpPopup" class="help-close-btn" type="button" aria-label="Close guide">
+                    <svg id="closePopUp-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+
+                    <svg id="closePopUp-icon-hover" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0062ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+                </button>
+                <h2 id="help-title">How to use this AI chat</h2>
+                <p>This assistant is designed for quick question-and-answer support based on the local knowledge file for this project.</p>
+                <h3>How to use it</h3>
+                <ol>
+                    <li>Type a clear question in the input bar at the bottom.</li>
+                    <li>Press Enter or click the send button.</li>
+                    <li>Your message appears on the right, and the assistant answer appears on the left.</li>
+                    <li>Use specific terms related to your topic to get a stronger match.</li>
+                </ol>
+                <h3>How it works</h3>
+                <p>The script loads data from <code>kb.JSON</code>. Each knowledge item has keywords, a question label, and an answer. Your input is converted to lowercase and compared against each keyword. Every match adds a score. The highest-scoring item is selected and rendered as the response.</p>
+                <p class="help-note">Best results: ask focused questions and include key terms that are likely to exist in the knowledge base.</p>
+                <h3>Examples</h3>
+                <p>Try to include keywords such as: website cost, start business, planets solar system, side hustle 2026, go viral or productivity apps</p>
+            </div>
+        </div>
+
+        <h1 id="header">Welcome Back!</h1>
+        <div id="history"></div>
+        <div id="inputArea">
+            <form id="form" autocomplete="off">
+                <input type="text" id="userInput" placeholder="Type your question here...">
+                <button id="sendMessage">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

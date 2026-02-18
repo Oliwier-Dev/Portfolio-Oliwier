@@ -1,0 +1,418 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+#history {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 32px 24px 120px 24px;
+    scroll-behavior: smooth;
+}
+
+#inputArea {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    padding: 0 24px 24px 24px;
+    background: linear-gradient(to top, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 70%, transparent 100%);
+    backdrop-filter: blur(8px);
+    pointer-events: none;
+}
+
+#form {
+    display: flex;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    pointer-events: all;
+}
+
+#form:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59,130,246,0.12), 0 2px 4px rgba(59,130,246,0.08);
+}
+
+#userInput {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px 4px;
+    font-size: 15px;
+    outline: none;
+    color: #111827;
+    min-width: 0;
+    font-family: inherit;
+}
+
+#userInput::placeholder {
+    color: #9ca3af;
+}
+
+#sendMessage {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(59,130,246,0.3);
+}
+
+#sendMessage:hover:not(:disabled) {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px rgba(59,130,246,0.4);
+}
+
+#sendMessage:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.userQuestionDiv {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    max-width: 75%;
+    padding: 14px 18px;
+    border-radius: 20px 20px 4px 20px;
+    align-self: flex-end;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.aiResponseDiv {
+    background-color: #f9fafb;
+    color: #1f2937;
+    max-width: 75%;
+    padding: 14px 18px;
+    border-radius: 20px 20px 20px 4px;
+    align-self: flex-start;
+    border: 1px solid #e5e7eb;
+    font-size: 15px;
+    line-height: 1.6;
+    word-break: break-word;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.questionDiv {
+    font-size: 15px;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 8px;
+}
+
+.answerDiv {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+/* Scrollbar styling */
+#history::-webkit-scrollbar {
+    width: 8px;
+}
+
+#history::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#history::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.3);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+#history::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 0.5);
+    background-clip: padding-box;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        max-width: 100%;
+    }
+
+    #history {
+        padding: 20px 16px 100px 16px;
+        gap: 1.25rem;
+    }
+
+    #inputArea {
+        max-width: 100%;
+        padding: 0 16px 16px 16px;
+    }
+
+    #form {
+        padding: 10px 12px;
+        gap: 8px;
+        border-radius: 20px;
+    }
+
+    #userInput {
+        padding: 6px 4px;
+        font-size: 16px;
+    }
+
+    #sendMessage {
+        width: 34px;
+        height: 34px;
+    }
+
+    .userQuestionDiv,
+    .aiResponseDiv {
+        max-width: 85%;
+        padding: 12px 16px;
+        border-radius: 18px 18px 4px 18px;
+        font-size: 15px;
+    }
+
+    .aiResponseDiv {
+        border-radius: 18px 18px 18px 4px;
+    }
+
+    .questionDiv {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .answerDiv {
+        font-size: 15px;
+    }
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#use-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    z-index: 80;
+}
+
+#use-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 28px rgba(17, 24, 39, 0.14);
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+#use-btn:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+#icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.help-popup {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(15, 23, 42, 0.36);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.24s ease, visibility 0.24s ease;
+    z-index: 120;
+}
+
+.help-popup.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.help-popup-panel {
+    width: min(680px, 100%);
+    max-height: min(80vh, 720px);
+    overflow: auto;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 48px rgba(17, 24, 39, 0.22);
+    color: #1f2937;
+    transform: translateY(8px) scale(0.985);
+    transition: transform 0.24s ease;
+}
+
+.help-popup.is-open .help-popup-panel {
+    transform: translateY(0) scale(1);
+}
+
+.help-popup-panel h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.help-popup-panel h3 {
+    font-size: 1rem;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.help-popup-panel p,
+.help-popup-panel li {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #374151;
+}
+
+.help-popup-panel ol {
+    padding-left: 1.1rem;
+}
+
+.help-popup-panel code {
+    background-color: #f3f4f6;
+    border-radius: 6px;
+    padding: 0 6px;
+    color: #1f2937;
+}
+
+.help-note {
+    margin-top: 14px;
+    border-left: 3px solid #3b82f6;
+    padding-left: 10px;
+}
+
+.help-close-btn {
+    position: relative;
+    margin-left: auto;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    color: #374151;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.help-close-btn svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.3s ease;
+}
+
+.help-close-btn:hover {
+    transform: scale(1.05);
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.help-close-btn:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+#closePopUp-icon {
+    transition: 0.3s ease;
+}
+
+#closePopUp-icon-hover {
+    opacity: 0;
+}
+
+.help-close-btn:hover #closePopUp-icon {
+    opacity: 0;
+}
+
+.help-close-btn:hover #closePopUp-icon-hover {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .help-popup {
+        padding: 14px;
+    }
+
+    .help-popup-panel {
+        border-radius: 16px;
+        padding: 18px;
+    }
+
+    #use-btn {
+        width: 44px;
+        height: 44px;
+        top: 12px;
+        left: 12px;
+    }
+}
