@@ -747,6 +747,7 @@ body {
         grid-column: 1;
         grid-row: auto;
         min-height: clamp(263px, 49.4vh, 494px);
+        background-image: url('./images/card-3/card-3-2.avif');
     }
     
     #short-right-cards {
@@ -757,6 +758,13 @@ body {
     
     .right-small-card {
         min-height: clamp(230px, 34vh, 380px);
+    }
+
+}
+
+@media (max-width: 1100px) {
+    #responsive-card {
+        background-image: url('./images/card-4/card-4-2.avif');
     }
 }
 
@@ -1223,6 +1231,18 @@ body.dark-mode #responsive-card {
 
 body.dark-mode #process-card {
     background-image: url('./images/card-5/card darkmode-5-2.avif');
+}
+
+@media (max-width: 1100px) {
+    body.dark-mode #responsive-card {
+        background-image: url('./images/card-4/card darkmode-4-2.avif');
+    }
+}
+
+@media (max-width: 768px) {
+    body.dark-mode #long-left-card {
+        background-image: url('./images/card-3/card darkmode-3-2.avif');
+    }
 }
 
 body.dark-mode .small-card-text-panel {
