@@ -224,7 +224,7 @@ function setupPortfolioNetwork() {
 function createPortfolioNetwork(canvas) {
     const config = {
         density: 'balanced',
-        connectRadius: 100,
+        connectRadius: 110,
         maxLineAlpha: 0.5,
         lineWidth: 1.0,
         mobileMode: 'static'
