@@ -1,11 +1,10 @@
-// ===== UI ELEMENTS =====
+﻿// ===== UI ELEMENTS =====
 const ui = {
     switchThemeBtn:     document.getElementById('switchThemeBtn'),
     viewMyWorkBtn:      document.getElementById('second-CTA-Btn-element'),
     arrowScroll:        document.getElementById('arrow-scroll-container'),
     toggleElements:     document.querySelectorAll('.toggle-nav-element'),
     whatIDOSection:     document.getElementById('what-I-Do-Section'),
-    myWorkHeading:      document.getElementById('my-work-heading'),
     favicon:            document.getElementById('site-favicon')
 };
 
@@ -77,12 +76,7 @@ function toggleTheme() {
 }
 
 function scrollToMyWork() {
-    if (ui.myWorkHeading) {
-        ui.myWorkHeading.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
+    window.location.href = './Other pages/myProjects/index.html';
 }
 
 function scrollToWhatIDo() {
@@ -459,3 +453,4 @@ function createPortfolioNetwork(canvas) {
         refreshPalette
     };
 }
+

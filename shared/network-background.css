@@ -1,0 +1,61 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    --network-dot-rgb: 122, 134, 149;
+    --network-line-rgb: 89, 103, 122;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+#main-content-whitespace-container {
+    position: relative;
+    isolation: isolate;
+    max-width: 1250px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#portfolio-network-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#portfolio-network-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#main-content-whitespace-container > *:not(#portfolio-network-layer) {
+    position: relative;
+    z-index: 1;
+}
+
+#main {
+    min-height: 100vh;
+}
+
+body,
+#main-content-whitespace-container {
+    transition: background-color 0.28s ease, color 0.28s ease;
+}
+
+body.dark-mode {
+    --network-dot-rgb: 140, 156, 180;
+    --network-line-rgb: 146, 176, 224;
+    background-color: #070d19;
+    color: #e5e7eb;
+}
+
+body.dark-mode #main-content-whitespace-container {
+    background-color: #070d19;
+}

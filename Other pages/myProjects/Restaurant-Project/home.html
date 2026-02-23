@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellaro - Home Page</title>
+    <link rel="icon" type="image/x-icon" href="Images/Restaurant Favicon.png">
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="logo">
+      <img src="Images/Restaurant Favicon.png" alt="Vellaro Logo. 'Vellaro' text with nice warm colors">
+    </div>
+
+    <!-- desktop links -->
+    <ul class="main-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- desktop Important -->
+    <a class="navbar-important" href="important.html">Important</a>
+
+    <!-- hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- mobile overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+    <ul class="mobile-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a class="navbar-important mobile-important" href="important.html">
+      Important
+    </a>
+  </div>
+</nav>
+
+    <!-- Main Content -->
+
+    <main>
+
+        <!-- Hero section of home page -->
+
+        <section class="home-hero">
+            <div class="hero-image"> <!-- Background image for hero goes here in css to make it all work. (Use background-image: ;) -->
+                <div class="hero-text">
+                    <h1>Food So Good You Can't Stop Eating</h1>
+                    <p>Book today to experience the reality about delicious food</p>
+                    <a class="btn-contact" href="contact.html">Book a Table</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Short card about the restaurant -->
+
+        <section class="home-about">
+            <div class="home-about-heading">
+                <h2>About Our Restaurant</h2>
+            </div>
+            <div class="home-about-content">
+                <img src="Images/About-hero-image.png" alt="Cinematic image outside of the restaurant">
+                <div class="home-about-text">
+                    <p>Our restaurant was founded in 1998, with a focus on <span>quality</span> and <span>clarity</span> over noise. Every dish reflects our commitment to excellence, where <span>simplicity</span> and <span>authenticity</span> take center stage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Short about our best dishes -->
+
+        <section class="home-dishes">
+            <div class="home-dishes-heading">
+                <h2>Chef’s Selection</h2>
+            </div>
+            <div class="dish-showcase">
+                    <div class="dish">
+                        <img src="Images/Truffle Risotto.jpg" alt="Truffle-Infused Risotto dish" loading="lazy">
+                        <div class="home-dish-text">
+                            <h3>Truffle-Infused Risotto</h3> <!-- Dish Name -->
+                            <p>Creamy Arborio rice slowly cooked in a rich Parmesan broth, finished with black truffle shavings for a luxurious aroma.</p> <!-- Description -->
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <img src="Images/Seared Wagyu Beef.jpg" alt="Seared Wagyu Beef Medallions dish" loading="lazy">
+                        <div class="home-dish-text">
+                            <h3>Seared Wagyu Beef Medallions</h3> <!-- Dish Name -->
+                            <p>Tender Wagyu beef medallions, seared to perfection, served with a red wine reduction and microgreens.</p> <!-- Description -->
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <img src="Images/Lobster Thermidor.jpg" alt="Lobster Thermidor dish" loading="lazy">
+                        <div class="home-dish-text">
+                            <h3>Lobster Thermidor</h3> <!-- Dish Name -->
+                            <p>Succulent lobster baked in a creamy mustard and cognac sauce, topped with a golden Parmesan crust.</p> <!-- Description -->
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <img src="Images/Buttery Chilean Sea Bass in Garlic Herb Sauce.jpg" alt="Pan-Roasted Sea Bass dish" loading="lazy">
+                        <div class="home-dish-text">
+                            <h3>Pan-Roasted Sea Bass</h3> <!-- Dish Name -->
+                            <p>Delicate sea bass fillet with a saffron beurre blanc, accompanied by heirloom vegetable ribbons.</p> <!-- Description -->
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <img src="Images/Wild Mushroom Tart.jpg" alt="Wild Mushroom and Foie Gras Tart dish" loading="lazy">
+                        <div class="home-dish-text">
+                            <h3>Wild Mushroom and Foie Gras Tart</h3> <!-- Dish Name -->
+                            <p>Flaky pastry layered with earthy wild mushrooms and seared foie gras, drizzled with a truffle glaze.</p> <!-- Description -->
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <img src="Images/Chocolate Hazelnut Opera Cake.jpg" alt="Chocolate Hazelnut Opera Cake dish" loading="lazy">
+                        <div class="home-dish-text">
+                            <h3>Chocolate Hazelnut Opera Cake</h3> <!-- Dish Name -->
+                            <p>Layers of rich chocolate ganache and hazelnut cream, finished with a glossy dark chocolate glaze.</p> <!-- Description -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-dish-btn">
+                <a class="btn-contact btn-dish" href="contact.html">Book a Table</a>
+            </div>
+        </section>
+
+        <!-- Reviews from customers -->
+
+        <hr>
+        <section class="home-reviews">
+            <h2>What Our Guests Say</h2>
+            <div class="home-reviews-cards">
+                <div class="review-card">
+                    <p>“The food is consistently excellent, and the atmosphere is very pleasant. Definitely worth a visit.” — <b>Eleanor W.</b></p>
+                </div>
+                <div class="review-card">
+                    <p>“I enjoyed the variety of dishes and the quality of ingredients. The service was attentive without being intrusive.” — <b>Marcus L.</b></p>
+                </div>
+                <div class="review-card">
+                    <p>“A well-curated menu and nice presentation. Overall, a very enjoyable dining experience.” — <b>Isabella T.</b></p>
+                </div>
+            </div>
+            <p>Loved by locals since 1998</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer-main-content">
+            <div class="footer-recognition">
+                <img src="Images/Restaurant Favicon.png" alt="Vellaro Logo. 'Vellaro' text with nice warm colors" loading="lazy"> 
+                <p>Authentic cuisine since 1998.</p>
+            </div>
+            <ul class="footer-main-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="footer-contact">
+                <p><span>Address:</span> <i>Washington, DC 20036, USA</i></p>
+                <p><span>Phone:</span> <i>123 456 789</i></p>
+                <p><span>Mail:</span> Vellaro@gmail.com</p>
+                <p><span>Open Hours:<span> 12:00–22:00</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025 Vellaro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

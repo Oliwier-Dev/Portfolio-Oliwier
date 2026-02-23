@@ -23,6 +23,31 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    (function () {
+      const THEME_STORAGE_KEY = 'portfolio-theme';
+
+      function applyThemeFromStorage() {
+        let isDarkMode = false;
+
+        try {
+          isDarkMode = localStorage.getItem(THEME_STORAGE_KEY) === 'dark';
+        } catch (_) {
+          isDarkMode = false;
+        }
+
+        document.documentElement.classList.toggle('dark-mode', isDarkMode);
+      }
+
+      applyThemeFromStorage();
+
+      window.addEventListener('storage', function (event) {
+        if (event.key === THEME_STORAGE_KEY) {
+          applyThemeFromStorage();
+        }
+      });
+    })();
+  </script>
 </head>
 <body>
   <main id="main">

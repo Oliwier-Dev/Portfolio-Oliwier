@@ -1,0 +1,281 @@
+:root {
+    /* Base colors */
+    --color-bg-main: #131210;
+    --color-bg-section: #181716;
+    --color-bg-card: #24211d;
+
+    /* Text */
+    --color-text-primary: #f1f1f1;   
+    --color-text-secondary: #f1eadf; 
+    --color-text-muted: #b4afa3;     
+
+    /* Brand accent */
+    --color-accent: #b08d57;   
+    --color-accent-hover: #8a6938;   /* Darker bronze for hover */
+    --color-accent-soft: #3a3124;
+
+    /* Borders */
+    --color-border: #2f2c28;   
+    --color-border-soft: #26231f;
+}
+
+/* About-hero-section */
+
+.about-story {
+    margin-bottom: 5rem;
+}
+
+.about-story-image {
+    background-image: url(../Images/About-hero-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
+    filter: saturate(0.85) contrast(1.05);
+}
+
+.about-story-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(19, 18, 16, 0.7),
+        rgba(19, 18, 16, 0.9)
+    );
+    z-index: 1;
+}
+
+.about-story-text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    text-align: center;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+.about-story-text h2 {
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+}
+
+.about-story-text p {
+    color: var(--color-text-secondary);
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1.125rem;
+    letter-spacing: 0.02;
+}
+
+@media screen and (max-width: 270px){
+    .about-story-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-story-text p {
+        font-size: 1rem;
+    }
+
+}
+
+/* Story-body-longer version */
+
+.about-story-body {
+    background-color: var(--color-bg-section);
+    max-width: 1000px;
+    margin: 0 auto 6rem;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, rgba(24, 23, 22, 0.95), rgb(21, 19, 17));
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.3);
+}
+
+.about-story-body-content {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.about-story-body-content-content {
+    padding: 1.2rem;
+}
+
+.about-story-body-content-content h3 {
+    letter-spacing: 0.05rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.about-story-body-content-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.02rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 250px){
+    .about-story-body-content {
+        padding: 1rem;
+    }
+    
+    .about-story-body-content-content {
+        padding: 0.4rem;
+    }
+}
+
+/* Chef introduction */
+
+.about-chef-introduction {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin: auto;
+    background-color: var(--color-bg-card);
+    border-radius: 10px;
+    box-shadow: 0px 4px 25px rgba(0,0,0,0.25);
+    margin-bottom: 4rem;
+}
+
+.about-chef-image {
+    max-width: 50%;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 15px rgba(0,0,0,0.2);
+    transition: 0.4s ease;
+}
+
+.about-chef-image:hover {
+    transform: scale(1.03);
+}
+
+.about-chef-bio {
+    text-align: center;
+}
+
+.about-chef-bio h3 {
+    font-size: 1.75rem;
+    letter-spacing: 0.08rem;
+    line-height: 1.8;
+}
+
+.about-chef-bio p {
+    font-size: 1.1rem;
+    letter-spacing: 0.02;
+    line-height: 1.4;
+    font-weight: 350;
+}
+
+@media screen and (max-width: 650px){
+    .about-chef-introduction {
+        flex-direction: column;
+    }
+
+    .about-chef-image {
+        max-width: 80%;
+    }
+
+    .about-chef-bio h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-chef-bio p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .about-chef-introduction {
+        padding: 0.3rem;
+    }
+    .about-chef-image {
+        max-width: 100%;
+    }
+
+    .about-chef-bio h3 {
+        font-size: 1.25rem;
+    }
+
+    .about-chef-bio p {
+        font-size: 100%;
+    }
+}
+
+/* Philosophy */
+.about-philosophy {
+    display: flex;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    flex-wrap: wrap;
+}
+
+.about-philosophy-item {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--color-bg-card);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.about-philosophy-item:hover {
+    transform: translateY(-10px);
+    background-color: #2b251e;
+}
+
+.about-philosophy-image {
+    width: 80%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    border-radius: 10px;
+}
+
+.about-philosophy-text {
+    letter-spacing: 1.4px;
+    flex-grow: 1;
+}
+
+.about-philosophy-text h3 {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 600px){
+    .about-philosophy {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 5rem;
+    }
+
+    .about-philosophy-item {
+        flex: 1 1 100%;
+        padding: 1rem;
+    }
+
+    .about-philosophy-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .about-philosophy-text p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .about-philosophy-item {
+        padding: 0.4rem;
+    }
+}

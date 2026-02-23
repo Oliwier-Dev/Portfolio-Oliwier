@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellaro - Menu</title>
+        <link rel="icon" type="image/x-icon" href="Images/Restaurant Favicon.png">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+        <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="logo">
+      <img src="Images/Restaurant Favicon.png" alt="Vellaro Logo. 'Vellaro' text with nice warm colors">
+    </div>
+
+    <!-- desktop links -->
+    <ul class="main-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- desktop Important -->
+    <a class="navbar-important" href="important.html">Important</a>
+
+    <!-- hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- mobile overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+    <ul class="mobile-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a class="navbar-important mobile-important" href="important.html">
+      Important
+    </a>
+  </div>
+</nav>
+
+
+    <!-- Main content -->
+
+    <main>
+        <section class="menu">
+            <h1 class="menu-header">Our Selection</h1>
+            <div class="filters">
+                <button data-category="starters">Starters</button>
+                <button data-category="main">Main</button>
+                <button data-category="dessert">desserts</button>
+                <button data-category="drinks">drinks</button>
+            </div>
+
+            <div class="menu-list">
+                <div class="dish" data-category="starters">
+                    <img src="Images/Wild Mushroom Tart.jpg" alt="Wild Mushroom and Foie Gras Tart" loading="lazy">
+                    <h3>Wild Mushroom and Foie Gras Tart</h3>
+                    <p>Flaky pastry layered with earthy wild mushrooms and seared foie gras, drizzled with a truffle glaze.</p>
+                    <span class="price">18$</span>
+                </div>
+
+                <div class="dish" data-category="starters">
+                    <img src="Images/Truffle Risotto.jpg" alt="Truffle-Infused Risotto" loading="lazy">
+                    <h3>Truffle-Infused Risotto</h3>
+                    <p>Creamy Arborio rice slowly cooked in a rich Parmesan broth, finished with black truffle shavings for a luxurious aroma.</p>
+                    <span class="price">32$</span>
+                </div>
+
+                <div class="dish" data-category="main">
+                    <img src="Images/Seared Wagyu Beef.jpg" alt="Seared Wagyu Beef Medallions" loading="lazy">
+                    <h3>Seared Wagyu Beef Medallions</h3>
+                    <p>Tender Wagyu beef medallions, seared to perfection, served with a red wine reduction and microgreens.</p>
+                    <span class="price">60$</span>
+                </div>
+
+                <div class="dish" data-category="main">
+                    <img src="Images/Lobster Thermidor.jpg" alt="Lobster Thermidor" loading="lazy">
+                    <h3>Lobster Thermidor</h3>
+                    <p>Succulent lobster baked in a creamy mustard and cognac sauce, topped with a golden Parmesan crust.</p>
+                    <span class="price">48$</span>
+                </div>
+
+                <div class="dish" data-category="main">
+                    <img src="Images/Buttery Chilean Sea Bass in Garlic Herb Sauce.jpg" alt="Pan-Roasted Sea Bass" loading="lazy">
+                    <h3>Pan-Roasted Sea Bass</h3>
+                    <p>Delicate sea bass fillet with a saffron beurre blanc, accompanied by heirloom vegetable ribbons.</p>
+                    <span class="price">34$</span>
+                </div>
+
+                <div class="dish" data-category="dessert">
+                    <img src="Images/Chocolate Hazelnut Opera Cake.jpg" alt="Chocolate Hazelnut Opera Cake" loading="lazy">
+                    <h3>Chocolate Hazelnut Opera Cake</h3>
+                    <p>Layers of rich chocolate ganache and hazelnut cream, finished with a glossy dark chocolate glaze.</p>
+                    <span class="price">24$</span>
+                </div>
+
+                <div class="dish" data-category="starters">
+                    <img src="Images/Burrata with Heirloom Tomatoes.jpg" alt="Burrata with Heirloom Tomatoes" loading="lazy">
+                    <h3>Burrata with Heirloom Tomatoes</h3>
+                    <p>Fresh burrata, cherry tomatoes, basil, olive oil drizzle</p>
+                    <span class="price">16$</span>
+                </div>
+
+                <div class="dish" data-category="starters">
+                    <img src="Images/How to Make Smoked Salmon Tartare.jpg" alt="Smoked Salmon Tartare" loading="lazy">
+                    <h3>Smoked Salmon Tartare</h3>
+                    <p>Citrus-marinated salmon with avocado mousse</p>
+                    <span class="price">20$</span>
+                </div>
+
+                <div class="dish" data-category="main">
+                    <img src="Images/Herb-Crusted Rack of Lamb with Minted Pea Purée.jpg" alt="Rack of Lamb with Herb Crust" loading="lazy">
+                    <h3>Rack of Lamb with Herb Crust</h3>
+                    <p>Served with rosemary jus and seasonal vegetables</p>
+                    <span class="price">55$</span>
+                </div>
+
+                <div class="dish" data-category="main">
+                    <img src="Images/Pan Seared Duck Breast with Orange Sauce _ Fine Dining Recipe.jpg" alt="Pan-Seared Duck Breast" loading="lazy">
+                    <h3>Pan-Seared Duck Breast</h3>
+                    <p>Glazed with orange reduction, served with potato purée</p>
+                    <span class="price">48$</span>
+                </div>
+
+                <div class="dish" data-category="dessert">
+                    <img src="Images/Lemon Verbena Panna Cotta - From Farmhouse to Florida.jpg" alt="Lemon Panna Cotta" loading="lazy">
+                    <h3>Lemon Panna Cotta</h3>
+                    <p>Silky lemon cream with berry coulis</p>
+                    <span class="price">12$</span>
+                </div>
+
+                <div class="dish" data-category="dessert">
+                    <img src="Images/tiramisu.jpg" alt="Tiramisu Millefeuille" loading="lazy">
+                    <h3>Tiramisu Millefeuille</h3>
+                    <p>Layered mascarpone cream with espresso-soaked pastry</p>
+                    <span class="price">14$</span>
+                </div>
+
+                <div class="dish" data-category="drinks">
+                    <img src="Images/Tequila Negroni.jpg" alt="Classic Negroni" loading="lazy">
+                    <h3>Classic Negroni</h3>
+                    <p>Gin, Campari, vermouth, orange twist</p>
+                    <span class="price">12$</span>
+                </div>
+
+                <div class="dish" data-category="drinks">
+                    <img src="Images/What is the 7 Second Ice Water Hack Recipe_.jpg" alt="Sparkling Elderflower Lemonade" loading="lazy">
+                    <h3>Sparkling Elderflower Lemonade</h3>
+                    <p>Fresh elderflower syrup with sparkling water and mint</p>
+                    <span class="price">8$</span>
+                </div>
+
+                <div class="dish" data-category="starters">
+                    <img src="2.jpg" alt="Seared Scallops with Citrus Foam" loading="lazy">
+                    <h3>Seared Scallops with Citrus Foam</h3>
+                    <p>Pan-seared scallops, citrus emulsion, microgreens</p>
+                    <span class="price">22$</span>
+                </div>
+
+                <div class="dish" data-category="starters">
+                    <img src="Images/garlic lemon beef carpaccio with arugula and truffle oil.jpg" alt="Beef Carpaccio with Truffle Oil" loading="lazy">
+                    <h3>Beef Carpaccio with Truffle Oil</h3>
+                    <p>Thinly sliced tenderloin, Parmesan, arugula, truffle vinaigrette</p>
+                    <span class="price">20$</span>
+                </div>
+
+                <div class="dish" data-category="main">
+                    <img src="Images/Miso-Glazed Black Cod with Ginger Foam.jpg" alt="Black Cod with Miso Glaze" loading="lazy">
+                    <h3>Black Cod with Miso Glaze</h3>
+                    <p>Oven-roasted cod, miso glaze, bok choy, jasmine rice</p>
+                    <span class="price">42$</span>
+                </div>
+
+                <div class="dish" data-category="main">
+                    <img src="Images/Saltimbocca alla Romana Recipe - Jamie Oliver___.jpg" alt="Veal Saltimbocca" loading="lazy">
+                    <h3>Veal Saltimbocca</h3>
+                    <p>Veal medallions, prosciutto, sage, white wine reduction</p>
+                    <span class="price">50$</span>
+                </div>
+
+                <div class="dish" data-category="dessert">
+                    <img src="Images/Pistachio Raspberry Mille-Feuille _ Eva Vetter addiction.jpg" alt="Raspberry Mille Feuille" loading="lazy">
+                    <h3>Raspberry Mille Feuille</h3>
+                    <p>Crisp pastry layers, fresh raspberries, vanilla cream</p>
+                    <span class="price">14$</span>
+                </div>
+
+                <div class="dish" data-category="dessert">
+                    <img src="1.jpg" alt="Caramelized Pear Tart Tatin" loading="lazy">
+                    <h3>Caramelized Pear Tart Tatin</h3>
+                    <p>Warm pear tart with caramel glaze and vanilla ice cream</p>
+                    <span class="price">16$</span>
+                </div>
+
+                <div class="dish" data-category="drinks">
+                    <img src="Images/If You Like a French 75, You’ll Love the French Harvest.jpg" alt="French 75" loading="lazy">
+                    <h3>French 75</h3>
+                    <p>Gin, Champagne, lemon juice, sugar</p>
+                    <span class="price">14$</span>
+                </div>
+
+                <div class="dish" data-category="drinks">
+                    <img src="Images/Iced Matcha Latte Recipe.jpg" alt="Iced Matcha Latte" loading="lazy"> 
+                    <h3>Iced Matcha Latte</h3>
+                    <p>Premium matcha, milk, touch of vanilla</p>
+                    <span class="price">9$</span>
+                </div>
+
+                <div class="dish" data-category="drinks">
+                    <img src="Images/Drink.jpg" alt="Water" loading="lazy">
+                    <h3>Water</h3>
+                    <p>Pure, refreshing water sourced from natural springs, served chilled, sparkling, or hot to perfectly complement your dining experience.</p>
+                    <span class="price">5$</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer-main-content">
+            <div class="footer-recognition">
+                <img src="Images/Restaurant Favicon.png" alt="Vellaro Logo. 'Vellaro' text with nice warm colors" loading="lazy"> 
+                <p>Authentic cuisine since 1998.</p>
+            </div>
+            <ul class="footer-main-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="footer-contact">
+                <p><span>Address:</span> <i>Washington, DC 20036, USA</i></p>
+                <p><span>Phone:</span> <i>123 456 789</i></p>
+                <p><span>Mail:</span> Vellaro@gmail.com</p>
+                <p><span>Open Hours:<span> 12:00–22:00</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025 Vellaro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

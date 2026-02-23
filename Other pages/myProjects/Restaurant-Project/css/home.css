@@ -1,0 +1,279 @@
+/* Main content - Hero section of the Home Page*/
+.home-hero {
+    margin-bottom: 5rem;
+}
+
+.hero-image {
+    background-image: url("../Images/Home-Hero-Image-1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+}
+
+.hero-text {
+    text-align: center;
+    transform: translateY(13.75rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.btn-contact a, .btn-contact {
+    display: inline;
+    text-decoration: none;
+    background: linear-gradient(135deg, rgb(176, 141, 87) 0%, rgb(138, 105, 57) 100%);
+    color: #f5f5f5;
+    padding: 0.7rem 1.2rem;
+    margin-top: 0.3rem;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0px 10px 25px rgba(176, 141, 87, 0.35), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+.btn-contact a::before, .btn-contact::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-contact:hover, .btn-contact a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 20px 40px rgba(176, 141, 87, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 0px 20px rgba(176, 141, 87, 0.4);
+    background: linear-gradient(135deg, rgb(200, 160, 100) 0%, rgb(160, 120, 70) 100%);
+}
+
+.btn-contact:hover::before, .btn-contact a:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+
+/* Short card about the restaurant */
+.home-about {
+    padding: 2rem 2rem 3.5rem;
+    background-color: var(--color-bg-card);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 6rem;
+}
+
+.home-about::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to bottom right, rgba(33, 33, 31, 0.02), rgba(36, 36, 44, 0.25));
+    pointer-events: none;
+}
+
+.home-about-heading {
+    text-align: center;
+}
+
+.home-about h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-primary);
+    font-size: 2rem;
+}
+
+.home-about h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-accent);
+    border-radius: 1px;
+}
+
+.home-about-content {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.home-about img {
+    width: 40%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 20px rgba(0,0,0,0.35);
+    transition: 0.4s ease;
+}
+
+.home-about img:hover {
+    transform: scale(1.03);
+}
+
+.home-about-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+.home-about-text p span {
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: 0.3s;
+}
+
+.home-about-text p span:hover {
+    text-shadow: 0px 0px 15px rgba(176, 141, 87, 0.5);
+}
+
+@media screen and (max-width: 500px){
+    .home-about {
+        padding: 1rem;
+    }
+
+    .home-about h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-about-content {
+        flex-direction: column;
+    }
+
+    .home-about img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 250px){
+    .home-about h2 {
+        font-size: 100%;
+    }
+
+    .home-about img {
+        width: 110%;
+    }
+}
+
+/* Short about our best dishes */
+.home-dishes {
+    margin-bottom: 4rem;
+}
+
+.dish-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 2fr);
+    text-align: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.dish {
+    background-color: var(--color-bg-card);
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.2);
+    gap: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.dish:hover {
+    transform: scale(1.03);
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 30px rgba(0,0,0,0.3);
+    background-color: #443c2e;
+}
+
+.home-dishes-heading {
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+.dish img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.home-dish-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 2rem;
+}
+
+@media screen and (max-width: 600px){
+    .dish-showcase {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 230px){
+    .home-dishes-heading {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .dish img {
+        width: 90%;
+    }
+
+    .dish {
+        padding: 0.75rem;
+    }
+}
+
+/* Reviews from customers */
+.home-reviews {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.home-reviews h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.home-reviews-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+}
+
+.review-card {
+    background-color: var(--color-bg-card);
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.7rem;
+    transition: 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-0.85rem);
+    background-color: #444039;
+    box-shadow: 0px 2px 12px rgba(0,0,0,0.15);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
+}

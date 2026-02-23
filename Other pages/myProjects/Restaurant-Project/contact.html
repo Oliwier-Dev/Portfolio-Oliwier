@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellaro - Contact</title>
+        <link rel="icon" type="image/x-icon" href="Images/Restaurant Favicon.png">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="logo">
+      <img src="Images/Restaurant Favicon.png" alt="Vellaro Logo. 'Vellaro' text with nice warm colors">
+    </div>
+
+    <!-- desktop links -->
+    <ul class="main-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- desktop Important -->
+    <a class="navbar-important" href="important.html">Important</a>
+
+    <!-- hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- mobile overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+    <ul class="mobile-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a class="navbar-important mobile-important" href="important.html">
+      Important
+    </a>
+  </div>
+</nav>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <div class="contact-hero-image"></div> <!-- Set it as a background image using css -->
+                <div class="contact-hero-text">
+                    <h1>Booking a table?</h1>
+                    <p>Ring us at <i>123 456 789</i></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google maps embedded -->
+         <section class="contact-map">
+            <h2>Where to find us</h2>
+            <div class="map-container">
+                <iframe
+                src="https://www.google.com/maps?q=38.909667,-77.043444&hl=es;z=15&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+            </div>
+        </section>
+
+        <section class="contact-extra-info">
+            <div class="contact-info">
+                <p>Address: <i>Washington, DC 20036, USA</i></p>
+                <p>Phone: <i>123 456 789</i></p>
+                <p>Mail: Vellaro@gmail.com</p>
+                <p>Open Hours: 12:00–22:00</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer-main-content">
+            <div class="footer-recognition">
+                <img src="Images/Restaurant Favicon.png" alt="Vellaro Logo. 'Vellaro' text with nice warm colors" loading="lazy"> 
+                <p>Authentic cuisine since 1998.</p>
+            </div>
+            <ul class="footer-main-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="footer-contact">
+                <p><span>Address:</span> <i>Washington, DC 20036, USA</i></p>
+                <p><span>Phone:</span> <i>123 456 789</i></p>
+                <p><span>Mail:</span> Vellaro@gmail.com</p>
+                <p><span>Open Hours:<span> 12:00–22:00</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025 Vellaro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -30,6 +30,11 @@ body {
     line-height: 1.6;
 }
 
+html,
+body {
+    transition: background-color 0.28s ease, color 0.28s ease;
+}
+
 #main {
     min-height: 100vh;
     display: flex;
@@ -83,6 +88,30 @@ body {
 #terms-of-service strong {
     color: #0a0a0a;
     font-weight: 600;
+}
+
+html.dark-mode body {
+    background-color: #070d19;
+    color: #e5e7eb;
+}
+
+html.dark-mode #privacy-policy h1,
+html.dark-mode #terms-of-service h1,
+html.dark-mode #privacy-policy h2,
+html.dark-mode #terms-of-service h2,
+html.dark-mode #privacy-policy strong,
+html.dark-mode #terms-of-service strong {
+    color: #f8fafc;
+}
+
+html.dark-mode #privacy-policy p,
+html.dark-mode #terms-of-service p {
+    color: #cbd5e1;
+}
+
+html.dark-mode .legal-last-updated {
+    color: #94a3b8;
+    opacity: 1;
 }
 
 /* Responsive: Mobile */

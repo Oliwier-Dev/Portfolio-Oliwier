@@ -992,6 +992,143 @@ body {
     }
 }
 
+/* ===== PHILOSOPHY SECTION ===== */
+#philosophy-section {
+    position: relative;
+    padding-block: clamp(56px, 8vw, 104px);
+}
+
+#philosophy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    width: 100dvw;
+    transform: translateX(-50%);
+    background-color: #f1ede6;
+    z-index: 0;
+    transition: background-color 0.28s ease;
+}
+
+#philosophy-section-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-inline: clamp(16px, 4vw, 40px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+    gap: clamp(28px, 6vw, 92px);
+    align-items: start;
+}
+
+#philosophy-overline {
+    margin: 0 0 clamp(14px, 2vw, 22px) 0;
+    font-size: clamp(12px, 1.1vw, 14px);
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #2f6b61;
+}
+
+#philosophy-heading {
+    margin: 0;
+    max-width: 660px;
+    font-size: clamp(36px, 5.3vw, 58px);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    color: #0a0a0a;
+}
+
+#philosophy-copy {
+    max-width: 760px;
+}
+
+.philosophy-paragraph {
+    margin: 0;
+    font-size: clamp(15px, 1.45vw, 19px);
+    line-height: 1.58;
+    color: #52555a;
+}
+
+.philosophy-paragraph + .philosophy-paragraph {
+    margin-top: clamp(18px, 3vw, 30px);
+}
+
+@media (max-width: 1024px) {
+    #philosophy-section-inner {
+        grid-template-columns: 1fr;
+        gap: clamp(22px, 4vw, 40px);
+    }
+
+    #philosophy-heading,
+    #philosophy-copy {
+        max-width: none;
+    }
+}
+
+@media (max-width: 640px) {
+    #philosophy-section {
+        padding-block: clamp(44px, 10vw, 70px);
+    }
+
+    #philosophy-overline {
+        letter-spacing: 0.12em;
+    }
+}
+
+/* ===== FINAL CTA SECTION ===== */
+#final-cta-section {
+    padding-block: clamp(88px, 16vw, 190px);
+}
+
+#final-cta-section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-inline: clamp(16px, 4vw, 40px);
+    text-align: center;
+}
+
+#final-cta-heading {
+    margin: 0 auto;
+    max-width: 920px;
+    font-size: clamp(34px, 5vw, 62px);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    color: #0a0a0a;
+}
+
+#final-cta-subtext {
+    margin: clamp(18px, 3vw, 32px) 0 0;
+    font-size: clamp(16px, 1.8vw, 24px);
+    line-height: 1.5;
+    color: #5b6472;
+}
+
+#final-cta-button {
+    margin-top: clamp(24px, 4vw, 40px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: clamp(190px, 24vw, 250px);
+}
+
+@media (max-width: 640px) {
+    #final-cta-section {
+        padding-block: clamp(72px, 18vw, 126px);
+    }
+
+    #final-cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
 /* ===== MY WORK SECTION ===== */
 
 
@@ -1224,6 +1361,8 @@ body,
 #what-I-Do-Section,
 #how-I-Doit,
 #what-makes-me-different,
+#philosophy-section,
+#final-cta-section,
 #my-work,
 #footer,
 .toggle-nav-element,
@@ -1261,6 +1400,8 @@ body.dark-mode #hero-section-subheading-text,
 body.dark-mode #what-I-Do-heading,
 body.dark-mode #how-I-Doit-heading,
 body.dark-mode #what-makes-me-different-heading,
+body.dark-mode #philosophy-heading,
+body.dark-mode #final-cta-heading,
 body.dark-mode #my-work-heading,
 body.dark-mode .toggle-title,
 body.dark-mode .different-section-heading,
@@ -1270,11 +1411,21 @@ body.dark-mode #footer-headings-2 {
 
 body.dark-mode .toggle-description,
 body.dark-mode .different-section-description,
+body.dark-mode .philosophy-paragraph,
+body.dark-mode #final-cta-subtext,
 body.dark-mode .my-work-project-description,
 body.dark-mode #moreProjects,
 body.dark-mode #footer,
 body.dark-mode .card-description {
     color: #cbd5e1;
+}
+
+body.dark-mode #philosophy-section::before {
+    background-color: #16130f;
+}
+
+body.dark-mode #philosophy-overline {
+    color: #8fb9ac;
 }
 
 body.dark-mode #switchThemeBtn {
