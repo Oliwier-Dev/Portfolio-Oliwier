@@ -76,7 +76,7 @@ function toggleTheme() {
 }
 
 function scrollToMyWork() {
-    window.location.href = './Other pages/myProjects/index.html';
+    window.location.href = './other-pages/my-projects/index.html';
 }
 
 function scrollToWhatIDo() {
