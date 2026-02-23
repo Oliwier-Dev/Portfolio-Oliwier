@@ -20,6 +20,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     --network-dot-rgb: 122, 134, 149;
     --network-line-rgb: 89, 103, 122;
@@ -1005,7 +1010,6 @@ body {
     bottom: 0;
     left: 50%;
     width: 100vw;
-    width: 100dvw;
     transform: translateX(-50%);
     background-color: #f1ede6;
     z-index: 0;
