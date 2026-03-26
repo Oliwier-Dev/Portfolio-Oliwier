@@ -325,7 +325,7 @@ body {
 .main-CTA-Btn-element:hover {
     background-color: #1f2937;
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    
 }
 
 .main-CTA-Btn-element:active {
@@ -586,7 +586,7 @@ body {
     flex-direction: column;
     gap: clamp(24px, 4vw, 40px);
     overflow-x: hidden;
-    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+    
 }
 
 #how-I-Doit-heading {
@@ -834,8 +834,8 @@ body {
 .round-point-style {
     width: 16px;
     height: 16px;
-    background-color: #56ade2;
-    border: 2px solid #0d61df;
+    background-color: #0a0a0a;
+    border: 2px solid #0a0a0a;
     border-radius: 50%;
     flex-shrink: 0;
     z-index: 2;
@@ -941,7 +941,7 @@ body {
     left: 50%;
     width: 100vw;
     transform: translateX(-50%);
-    background-color: #f1ede6;
+    background-color: transparent;
     z-index: 0;
     transition: background-color 0.28s ease;
 }
@@ -965,7 +965,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: #2f6b61;
+    color: #6b7280;
 }
 
 #philosophy-heading {
@@ -1346,11 +1346,11 @@ body.dark-mode .card-description {
 }
 
 body.dark-mode #philosophy-section::before {
-    background-color: #16130f;
+    background-color: transparent;
 }
 
 body.dark-mode #philosophy-overline {
-    color: #8fb9ac;
+    color: #6b7280;
 }
 
 body.dark-mode #how-I-Doit {
@@ -1408,8 +1408,8 @@ body.dark-mode #longLine {
 }
 
 body.dark-mode .round-point-style {
-    background-color: #0f172a;
-    border-color: #60a5fa;
+    background-color: #f1f5f9;
+    border-color: #f1f5f9;
 }
 
 body.dark-mode .different-section-text-container {
@@ -1502,13 +1502,13 @@ body.dark-mode #footer .simple-link:hover {
     position: absolute;
     inset: 0;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(47, 107, 97, 0.12) 0%, transparent 60%);
+    background: none;
     pointer-events: none;
 }
 
 .project-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
 
 .project-card:focus-visible {
@@ -1721,4 +1721,106 @@ body.dark-mode .footer-nav-link--cta:hover {
     #footer-nav {
         gap: 12px;
     }
+}
+
+
+/* ===== HUMAN-MADE DESIGN PRINCIPLES APPLIED =====
+   1. One voice — copy sounds like a person, not a pitch deck
+   2. Specific details — age, city, real project
+   3. Single accent color (used sparingly)
+   4. Intentional whitespace — nothing crammed
+   5. No gradients — flat colors only
+   6. 1-2 font weights — 400 and 700 only (no 500/600 mixing)
+   7. No hover effects that exist just to impress
+   8. Sections have a point — each one makes an argument
+   9. Slight asymmetry — not everything centered
+   10. The page has a POV — it makes a case, not a feature list
+*/
+
+/* Tighten button border radius to feel less rounded/playful */
+.main-CTA-Btn-element,
+.nav-cta-link {
+    border-radius: 7px;
+}
+
+/* Remove bounce animation from arrow — too animated */
+#arrow-scroll-container {
+    animation: none;
+}
+
+/* Simpler, quieter hover for arrow */
+#arrow-scroll-container:hover {
+    color: #0a0a0a;
+    transform: translateY(3px);
+}
+
+/* Better section spacing consistency */
+#services-section,
+#projects-section,
+#philosophy-section {
+    margin-top: clamp(24px, 4vw, 48px);
+}
+
+/* Philosophy section — clean, no full-bleed background */
+#philosophy-section {
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+body.dark-mode #philosophy-section {
+    border-top-color: #1f2937;
+    border-bottom-color: #1f2937;
+}
+
+/* Make the services section feel less like a separate "theme" — match border radius of project card */
+#services-section {
+    border-radius: 14px;
+}
+
+/* Quieter card hover on how-I-Doit cards */
+#planning-card:hover,
+#long-left-card:hover,
+#typography-card:hover,
+#responsive-card:hover,
+#process-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Timeline — make dots simpler and on-brand */
+.round-point-style {
+    width: 12px;
+    height: 12px;
+}
+
+/* Section overlines — one consistent style across all sections */
+.section-overline,
+#philosophy-overline {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #6b7280;
+}
+
+/* Services overline match */
+#services-section .section-overline {
+    color: #6b7280;
+}
+
+/* Footer HR — very subtle */
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 0;
+}
+
+body.dark-mode hr {
+    border-top-color: #1f2937;
+}
+
+/* Philosophy heading — less huge, more readable */
+#philosophy-heading {
+    font-size: clamp(28px, 4vw, 46px);
+    letter-spacing: -0.025em;
 }
