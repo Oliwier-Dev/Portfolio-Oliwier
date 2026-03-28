@@ -261,6 +261,7 @@ function setupStatsAnimation() {
 function animateCount(el) {
     const target = parseInt(el.dataset.count, 10);
     const suffix = el.dataset.suffix || '';
+    // Scale duration by target so 16 gets full 2600ms, smaller numbers are proportionally shorter
     const duration = Math.round(2600 * Math.sqrt(target / 16));
     const startTime = performance.now();
 
@@ -270,6 +271,8 @@ function animateCount(el) {
         const eased = 1 - Math.pow(1 - progress, 3.5);
 
         if (progress < 1) {
+            // Math.floor: number only advances when fully past the threshold,
+            // so 15→16 stays on 15 until the very last frame
             const current = Math.floor(eased * target);
             const blur = (1 - eased) * 3.5;
             el.style.filter = blur > 0.15 ? `blur(${blur.toFixed(2)}px)` : '';
