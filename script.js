@@ -41,6 +41,10 @@ function init() {
     setupHeroTextLoadAnimation();
     setupRoadmapTextRevealOnScroll();
     setupSectionReveal();
+<<<<<<< HEAD
+=======
+    setupStatsAnimation();
+>>>>>>> 6a4b987 (Updated the website)
 }
 
 // ===== EVENT LISTENERS =====
@@ -123,13 +127,10 @@ function applyTheme(withAnimation) {
             ui.switchThemeBtn.classList.add('theme-switching');
         }
 
-        if (isDarkMode) {
-            ui.switchThemeBtn.innerHTML = sunSVG;
-            ui.switchThemeBtn.setAttribute('data-tooltip', 'Switch to light mode');
-        } else {
-            ui.switchThemeBtn.innerHTML = moonSVG;
-            ui.switchThemeBtn.setAttribute('data-tooltip', 'Switch to dark mode');
-        }
+        ui.switchThemeBtn.setAttribute(
+            'data-tooltip',
+            isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'
+        );
 
         if (withAnimation) {
             setTimeout(() => {
@@ -227,3 +228,67 @@ function setupSectionReveal() {
 
     sections.forEach(s => observer.observe(s));
 }
+<<<<<<< HEAD
+=======
+
+// ===== STATS COUNTER ANIMATION =====
+function setupStatsAnimation() {
+    const statsContainer = document.querySelector('#philosophy-stats');
+    if (!statsContainer) return;
+
+    const statEls = statsContainer.querySelectorAll('.phil-stat-num[data-count]');
+    if (!statEls.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        statEls.forEach(el => {
+            el.textContent = el.dataset.count + (el.dataset.suffix || '');
+        });
+        return;
+    }
+
+    let triggered = false;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !triggered) {
+                triggered = true;
+                observer.disconnect();
+                statEls.forEach((el, i) => {
+                    setTimeout(() => animateCount(el), i * 140);
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(statsContainer);
+}
+
+function animateCount(el) {
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    // Scale duration by target so 16 gets full 2600ms, smaller numbers are proportionally shorter
+    const duration = Math.round(2600 * Math.sqrt(target / 16));
+    const startTime = performance.now();
+
+    function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3.5);
+
+        if (progress < 1) {
+            // Math.floor: number only advances when fully past the threshold,
+            // so 15→16 stays on 15 until the very last frame
+            const current = Math.floor(eased * target);
+            const blur = (1 - eased) * 3.5;
+            el.style.filter = blur > 0.15 ? `blur(${blur.toFixed(2)}px)` : '';
+            el.textContent = String(current);
+            requestAnimationFrame(step);
+        } else {
+            el.textContent = target + suffix;
+            el.style.filter = '';
+        }
+    }
+
+    requestAnimationFrame(step);
+}
+>>>>>>> 6a4b987 (Updated the website)
