@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,16 +7,16 @@
   script-src 'self' 'unsafe-inline' https://*.vercel-scripts.com;
   connect-src 'self' https://*.vercel-insights.com https://vitals.vercel-insights.com;
     ">
-    <meta name="description" content="Portfolio of Oliwier Mako, a web designer and developer building fast, high-converting landing pages and personal-brand websites for founders.">
+    <meta name="description" content="Oliwier Mako — 16-year-old developer and SaaS founder from Malmö, Sweden. Building Zarvalo, a lead generation tool for web agencies.">
     <meta name="theme-color" content="#f4f4f4">
-    <meta property="og:title" content="Oliwier Mako | Web Designer & Developer">
-    <meta property="og:description" content="Fast, high-converting landing pages and personal-brand websites built to help founders win online.">
+    <meta property="og:title" content="Oliwier Mako | Developer & SaaS Founder">
+    <meta property="og:description" content="Building Zarvalo — a SaaS that helps web agencies find local businesses with broken websites before competitors do.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./images/Profile pic.avif">
     <meta property="og:image:alt" content="Portrait of Oliwier Mako">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Oliwier Mako | Web Designer & Developer">
-    <meta name="twitter:description" content="Fast, high-converting landing pages and personal-brand websites built to help founders win online.">
+    <meta name="twitter:title" content="Oliwier Mako | Developer & SaaS Founder">
+    <meta name="twitter:description" content="Building Zarvalo — a SaaS that helps web agencies find local businesses with broken websites before competitors do.">
     <meta name="twitter:image" content="./images/Profile pic.avif">
     <title>Oliwier Mako</title>
     <link id="site-favicon" rel="icon" href="./images/favicon/favicon.png" type="image/png">
@@ -26,118 +26,122 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
-
-
 </head>
 <body>
-    <button id="switchThemeBtn" aria-label="Toggle theme" data-tooltip="Switch to dark mode">
-        <svg class="theme-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="24" height="24" aria-hidden="true" focusable="false">
-            <path d="M0 0 C23.90249954 21.08640046 38.91425423 52.68216487 40.91015625 84.421875 C40.93980469 85.27265625 40.96945313 86.1234375 41 87 C41.03996094 87.97453125 41.07992187 88.9490625 41.12109375 89.953125 C41.87355895 125.89440408 27.90620839 158.34155776 3.25 184.1875 C-17.00594191 203.67665547 -46.03096087 219.1763328 -74.6875 219.25 C-76.12611546 219.18887522 -77.56477541 219.11610806 -79 219 C-79 215 -79 215 -77.234375 212.984375 C-76.41453125 212.24703125 -75.5946875 211.5096875 -74.75 210.75 C-47.25581983 184.18782593 -32.39107177 144.51911134 -31.6484375 106.70922852 C-31.37151364 63.62160601 -46.43424669 25.29873707 -76 -6 C-76.69480469 -6.74765625 -77.38960937 -7.4953125 -78.10546875 -8.265625 C-83.31355524 -13.6919009 -88.97671546 -18.24822962 -94.984375 -22.73828125 C-97.70061388 -24.77546041 -100.36092341 -26.86430283 -103 -29 C-102.67 -29.99 -102.34 -30.98 -102 -32 C-64.0230953 -36.80069224 -28.86226106 -24.66056826 0 0 Z M-90 -27 C-86.49615485 -23.44491032 -82.88805508 -20.03769607 -79.1875 -16.6875 C-77.59735972 -15.22979071 -76.00985977 -13.76926521 -74.42333984 -12.30761719 C-73.24216979 -11.22248051 -72.05365326 -10.14534682 -70.86328125 -9.0703125 C-41.37474804 18.74905845 -27.65838033 60.36487088 -25.87109375 99.84765625 C-25.02467664 139.96782717 -39.92624789 177.20204143 -64.77734375 208.1640625 C-66.96132797 210.75619675 -66.96132797 210.75619675 -68 213 C-36.3118508 208.19621143 -7.75301403 191.82900143 11.64526367 166.06713867 C21.98658458 151.7870465 28.90307827 136.11067311 33 119 C33.24492187 117.98679688 33.48984375 116.97359375 33.7421875 115.9296875 C39.68628465 85.39494188 32.60981392 52.71480372 15.61572266 26.89697266 C-3.51795707 -0.95683781 -30.39829468 -18.44484381 -63.3515625 -25.7421875 C-72.20503776 -27.34591875 -81.04015756 -27.1931463 -90 -27 Z " fill="currentColor" transform="translate(178,55)"/>
-        </svg>
-    </button>
-    <div id="main-content-whitespace-container">
-        <div id="portfolio-network-layer" aria-hidden="true">
-            <canvas id="portfolio-network-canvas"></canvas>
+
+    <nav id="site-nav" role="navigation" aria-label="Main navigation">
+        <div id="nav-inner">
+            <a id="nav-logo" href="#">Oliwier Mako</a>
+            <div id="nav-links-center">
+                <a href="#zarvalo-section" class="nav-link">Zarvalo</a>
+                <a href="#projects-section" class="nav-link">Projects</a>
+                <a href="#philosophy-section" class="nav-link">About</a>
+            </div>
+            <div id="nav-right">
+                <button id="switchThemeBtn" aria-label="Toggle theme" data-tooltip="Switch to dark mode">
+                    <!-- Moon: shown in light mode -->
+                    <svg class="theme-icon theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998z"/>
+                    </svg>
+                    <!-- Sun: shown in dark mode -->
+                    <svg class="theme-icon theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0z"/>
+                    </svg>
+                </button>
+                <a href="https://zarvalo.com" class="nav-cta-link" target="_blank" rel="noopener noreferrer">Try Zarvalo</a>
+                <button id="nav-mobile-btn" aria-label="Open menu" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
         </div>
+        <div id="nav-mobile-menu" aria-hidden="true">
+            <a href="#zarvalo-section" class="nav-mobile-link">Zarvalo</a>
+            <a href="#projects-section" class="nav-mobile-link">Projects</a>
+            <a href="#philosophy-section" class="nav-mobile-link">About</a>
+            <a href="https://zarvalo.com" class="nav-mobile-link nav-mobile-cta" target="_blank" rel="noopener noreferrer">Try Zarvalo</a>
+        </div>
+    </nav>
+
+    <div id="main-content-whitespace-container">
         <main id="main">
+
             <section id="hero-section">
                 <div id="hero-section-content">
                     <div id="hero-section-content-text">
-                        <h1 id="hero-section-heading-text">Websites built to help founders win online</h1>
-                        <p id="hero-section-subheading-text">I design fast, high-converting landing pages and personal-brand portfolios that turn attention into customers.</p>
+                        <p id="hero-overline">FOUNDER &middot; DEVELOPER &middot; BUILDER</p>
+                        <h1 id="hero-section-heading-text">I build tools that move the needle.</h1>
+                        <p id="hero-section-subheading-text">I&#8217;m Oliwier. 16, self-taught, based in Malm&#246;, Sweden. I&#8217;m building Zarvalo, a SaaS that helps web agencies find their next clients. I also build websites for founders who care about quality.</p>
                     </div>
                     <div id="hero-section-content-CTA-Btns-container">
-                        <a href="https://x.com/OliwierMako" class="main-CTA-Btn-element" target="_blank" rel="noopener noreferrer">Follow me on X</a>
-                        <button id="second-CTA-Btn-element">View my work</button>
-                    </div>
-                    <div id="arrow-scroll-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50" aria-hidden="true" focusable="false">
-                    <polygon points="50,80 10,20 90,20" fill="black" />
-                    </svg></div>
-                </div>
-            </section>
-
-            <section id="what-I-Do-Section">
-                <div id="what-I-Do-heading"><h1>What I do?</h1></div>
-                <div id="what-I-Do-content">
-                    <div id="container-Toggle-Sections">
-                        <button class="toggle-nav-element" data-tab="0">
-                            <div class="toggle-header">
-                                <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" focusable="false">
-                                    <polygon points="50,80 10,20 90,20" fill="currentColor" />
-                                </svg>
-                                <h2 class="toggle-title">Growth</h2>
-                            </div>
-                            <p class="toggle-description">I design websites that convert visitors into clients. Clear structure, strong calls-to-action, and purposeful layout guide users toward contacting you, turning attention into trust and action.</p>
-                        </button>
-                        <button class="toggle-nav-element" data-tab="1">
-                            <div class="toggle-header">
-                                <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" focusable="false">
-                                    <polygon points="50,80 10,20 90,20" fill="currentColor" />
-                                </svg>
-                                <h2 class="toggle-title">Design</h2>
-                            </div>
-                            <p class="toggle-description">Premium, modern design builds credibility. Consistent visuals, clean typography, and balanced spacing make your brand appear established, professional, and trustworthy at first glance. That's what I do.</p>
-                        </button>
-                        <button class="toggle-nav-element" data-tab="2">
-                            <div class="toggle-header">
-                                <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" focusable="false">
-                                    <polygon points="50,80 10,20 90,20" fill="currentColor" />
-                                </svg>
-                                <h2 class="toggle-title">Performance</h2>
-                            </div>
-                            <p class="toggle-description">Every website should be fast, responsive, and reliable so that it works flawlessly on all devices. Clean code and optimized assets ensure smooth interactions and a high-quality user experience.</p>
-                        </button>
-                        <button class="toggle-nav-element" data-tab="3">
-                            <div class="toggle-header">
-                                <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" focusable="false">
-                                    <polygon points="50,80 10,20 90,20" fill="currentColor" />
-                                </svg>
-                                <h2 class="toggle-title">Process</h2>
-                            </div>
-                            <p class="toggle-description">Structured, transparent workflow with clear milestones and regular updates. Delivery is on time, communication is simple, and collaboration is smooth, to reduce unnecessary stress.</p>
-                        </button>
-                    </div>
-                    <div id="container-myPhoto">
-                        <img id="myPhoto" src="./images/Profile pic.avif" alt="Portrait of Oliwier Mako" loading="lazy" decoding="async">
+                        <a href="https://zarvalo.com" class="main-CTA-Btn-element" target="_blank" rel="noopener noreferrer">Try Zarvalo &rarr;</a>
                     </div>
                 </div>
             </section>
 
-            <section id="how-I-Doit">
-                <div id="how-I-Doit-heading"><h1>How I do it?</h1></div>
-                <div id="planning-card" class="how-card">
-                    <div class="small-card-text-panel planning-card-text-panel">
-                        <p class="card-description">Every project starts with clear goals and a detailed user flow, ensuring every pixel has a purpose</p>
+            <section id="zarvalo-section" aria-labelledby="zarvalo-heading">
+                <div id="zarvalo-section-inner">
+                    <p class="section-overline zarvalo-overline">MY SAAS</p>
+                    <h2 id="zarvalo-heading">Meet Zarvalo.</h2>
+                    <p id="zarvalo-subheading">A lead generation tool built for web agencies. Find local businesses with broken or outdated websites before your competitors do.</p>
+                    <div id="zarvalo-cards">
+                        <div class="zarvalo-card">
+                            <span class="zarvalo-card-num">01</span>
+                            <h3 class="zarvalo-card-title">What it is</h3>
+                            <p class="zarvalo-card-desc">Zarvalo scrapes Google Maps, detects broken or outdated websites, and scores every lead 0&#8211;100 using real signals. No AI fluff.</p>
+                        </div>
+                        <div class="zarvalo-card">
+                            <span class="zarvalo-card-num">02</span>
+                            <h3 class="zarvalo-card-title">How it works</h3>
+                            <p class="zarvalo-card-desc">Pick a city and niche. Zarvalo does the research. You get a ranked list of businesses most likely to pay for a redesign.</p>
+                        </div>
+                        <div class="zarvalo-card">
+                            <span class="zarvalo-card-num">03</span>
+                            <h3 class="zarvalo-card-title">Who it&#8217;s for</h3>
+                            <p class="zarvalo-card-desc">Web agencies and solo founders who want a repeatable outreach pipeline without spending hours on manual research.</p>
+                        </div>
                     </div>
+                    <a href="https://zarvalo.com" class="main-CTA-Btn-element zarvalo-cta-btn" target="_blank" rel="noopener noreferrer">Try Zarvalo for Free &rarr;</a>
                 </div>
-                <div id="other-cards">
-                    <div id="long-left-card" class="how-card">
-                        <div class="small-card-text-panel">
-                            <p class="card-description">I optimize images, streamline buttons, and organize content so everything loads quickly and smoothly on any device</p>
-                        </div>
+            </section>
+
+            <section id="services-section" aria-labelledby="services-heading">
+                <div id="services-section-inner">
+                    <div id="services-header">
+                        <p class="section-overline">WHAT I BUILD</p>
+                        <h2 id="services-heading">Focused on what actually works.</h2>
                     </div>
-                    <div id="short-right-cards">
-                        <div id="typography-card" class="right-small-card how-card">
-                            <div class="small-card-text-panel">
-                            <p class="card-description">I use clean typography, balanced spacing, and consistent colors to make your website look professional and trustworthy</p>
+                    <div id="services-layout">
+                        <div id="services-grid">
+                            <div class="service-card">
+                                <h3 class="service-card-title">Growth</h3>
+                                <p class="service-card-desc">I build things people actually use. Every decision moves a metric that matters: signups, retention, revenue.</p>
+                            </div>
+                            <div class="service-card">
+                                <h3 class="service-card-title">Design</h3>
+                                <p class="service-card-desc">Clean, intentional design. Not trendy. Not loud. The kind that earns trust before a user reads a single word.</p>
+                            </div>
+                            <div class="service-card">
+                                <h3 class="service-card-title">Performance</h3>
+                                <p class="service-card-desc">Fast is a feature. Lean code, optimized assets, no bloat. Everything I ship loads instantly on every device.</p>
+                            </div>
+                            <div class="service-card">
+                                <h3 class="service-card-title">Automation</h3>
+                                <p class="service-card-desc">I build systems that work without me. Scrapers, pipelines, and automation that scale output without scaling effort.</p>
                             </div>
                         </div>
-                        <div id="responsive-card" class="right-small-card how-card">
-                            <div class="small-card-text-panel">
-                            <p class="card-description">I use flexible layouts and scalable images so your site works perfectly on any device</p>
-                            </div>
-                        </div>
-                        <div id="process-card" class="right-small-card how-card">
-                            <div class="small-card-text-panel">
-                            <p class="card-description">I keep you informed with regular updates and demos at every step, so you always know what's happening</p>
-                            </div>
+                        <div id="services-photo-wrap">
+                            <img src="./images/Profile pic.avif" alt="Portrait of Oliwier Mako" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
             </section>
 
             <section id="what-makes-me-different">
-                <div id="what-makes-me-different-heading"><h1>What makes me different?</h1></div>
+                <div id="what-makes-me-different-heading"><h2>How I think</h2></div>
                 <div id="different-section-container-main">
                     <div id="timeline-wrapper">
                         <div id="longLine">
@@ -148,25 +152,63 @@
                             <div class="round-point-style" data-point="4"></div>
                         </div>
                         <div class="different-section-text-container" id="different-section-text-1" data-position="left">
-                            <h2 class="different-section-heading">Efficiency</h2>
-                            <p class="different-section-description">I define the exact plan for making the entire website work as quickly as possible while ensuring that quality remains the priority</p>
+                            <h3 class="different-section-heading">Ship fast, learn faster</h3>
+                            <p class="different-section-description">I release early and iterate often. Every version teaches me something the previous one couldn&#8217;t. Progress beats waiting for perfect.</p>
                         </div>
                         <div class="different-section-text-container" id="different-section-text-2" data-position="right">
-                            <h2 class="different-section-heading">Communication</h2>
-                            <p class="different-section-description">I communicate clearly and simply, and I keep you updated every day. Unlike most software developers</p>
+                            <h3 class="different-section-heading">Do fewer things, better</h3>
+                            <p class="different-section-description">I&#8217;m not trying to build 10 products. I go deep on the ones that matter. Less breadth, more depth, better outcomes.</p>
                         </div>
                         <div class="different-section-text-container" id="different-section-text-3" data-position="left">
-                            <h2 class="different-section-heading">Client quality</h2>
-                            <p class="different-section-description">I value quality over quantity. I work only with founders who want real impact and prioritize quality and strong systems over cheap AI copy-and-paste work</p>
+                            <h3 class="different-section-heading">Think, then build</h3>
+                            <p class="different-section-description">I focus on structure and user flow before touching code. Clear thinking and strong execution are what turn ideas into products people use.</p>
                         </div>
                         <div class="different-section-text-container" id="different-section-text-4" data-position="right">
-                            <h2 class="different-section-heading">Conversion-focused design</h2>
-                            <p class="different-section-description">I focus on structure and user flow, not just code. AI can generate code, but it cannot replace clear thinking and strong execution. Which turn visitors into clients</p>
+                            <h3 class="different-section-heading">Design is a function</h3>
+                            <p class="different-section-description">Clean, intentional design isn&#8217;t decoration. It&#8217;s the difference between a user who stays and one who bounces in three seconds.</p>
                         </div>
                         <div class="different-section-text-container" id="different-section-text-5" data-position="left">
-                            <h2 class="different-section-heading">Premium aesthetics</h2>
-                            <p class="different-section-description">I design clean, modern aesthetics that capture attention quickly. No AI noise. No lost client trust. I understand what truly matters</p>
+                            <h3 class="different-section-heading">Founder mindset</h3>
+                            <p class="different-section-description">I think about leverage, not just output. The goal is always to build something that works harder than the hours I put in.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== PROJECTS SECTION ===== -->
+            <section id="projects-section" aria-labelledby="projects-heading">
+                <div id="projects-section-inner">
+                    <div id="projects-header">
+                        <p class="section-overline projects-overline">My Projects</p>
+                        <h2 id="projects-heading">Things I'm building</h2>
+                        <p id="projects-subheading">Beyond client work, I build my own products. Here is what is currently live.</p>
+                    </div>
+                    <div id="projects-grid">
+
+                        <a href="https://zarvalo.com" class="project-card project-card-featured" target="_blank" rel="noopener noreferrer" aria-label="Visit Zarvalo — AI lead generation SaaS">
+                            <div class="project-card-meta">
+                                <span class="project-tag">SaaS · Lead Generation</span>
+                                <span class="project-status-badge">
+                                    <span class="project-status-dot"></span>
+                                    Live
+                                </span>
+                            </div>
+                            <h3 class="project-card-name">Zarvalo</h3>
+                            <p class="project-card-tagline">Find the local businesses that need a better website, before your competitors do.</p>
+                            <p class="project-card-desc">Zarvalo scrapes Google Maps, detects broken or outdated websites, scores every lead 0–100 using real signals (no AI fluff), and surfaces only the businesses most likely to pay for a redesign. Built for web agencies and solo founders who want a repeatable pipeline without the manual research.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Playwright</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">Render</span>
+                            </div>
+                            <div class="project-card-cta">
+                                <span>Visit zarvalo.com</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </section>
@@ -174,51 +216,85 @@
             <section id="philosophy-section" aria-labelledby="philosophy-heading">
                 <div id="philosophy-section-inner">
                     <div id="philosophy-intro">
-                        <p id="philosophy-overline">PHILOSOPHY</p>
-                        <h2 id="philosophy-heading">How I Think and Live</h2>
+                        <p id="philosophy-overline">ABOUT</p>
+                        <h2 id="philosophy-heading">Who I Am</h2>
+                        <div id="philosophy-stats">
+                            <div class="phil-stat">
+                                <span class="phil-stat-num" data-count="16">16</span>
+                                <span class="phil-stat-label">Years old</span>
+                            </div>
+                            <div class="phil-stat">
+                                <span class="phil-stat-num" data-count="3" data-suffix="+">3+</span>
+                                <span class="phil-stat-label">Years building</span>
+                            </div>
+                            <div class="phil-stat">
+                                <span class="phil-stat-num" data-count="1">1</span>
+                                <span class="phil-stat-label">Live SaaS</span>
+                            </div>
+                        </div>
                     </div>
                     <div id="philosophy-copy">
-                        <p class="philosophy-paragraph">I build web products that last, from front-end craft to web3 primitives. My focus is on simple systems, clear architecture, and code that can be trusted.</p>
-                        <p class="philosophy-paragraph">I plan, ship, measure, and improve fast because perfection comes from iteration, not from waiting. I break big problems into repeatable steps and turn experiments into tools that scale. I use automation and AI to remove routine work, surface useful patterns, and free time for design and hard problems. That makes me far more productive and lets me test more ideas in the same week. I am curious, disciplined, and practical. I prefer steady progress over empty claims. If you like systems thinking and honest work, you will enjoy the behind-the-scenes thinking here.</p>
+                        <p class="philosophy-paragraph">I&#8217;m Oliwier. 16, self-taught, based in Malm&#246;, Sweden. I started building websites because I wanted to understand how the internet actually works, not just how it looks. That curiosity turned into a habit, and that habit turned into Zarvalo.</p>
+                        <p class="philosophy-paragraph">Right now my main focus is growing Zarvalo into a real business. I also build websites for a small number of founders who care about quality over noise. If you want to work with me or just say hello, find me on X.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="final-cta-section" aria-labelledby="final-cta-heading">
-                <div id="final-cta-section-inner">
-                    <h2 id="final-cta-heading">If you think in systems, value real progress, and take your work and life seriously.</h2>
-                    <p id="final-cta-subtext">Let's connect.</p>
-                    <a href="https://x.com/OliwierMako" id="final-cta-button" class="main-CTA-Btn-element" target="_blank" rel="noopener noreferrer">Follow me on X</a>
+            <section id="final-cta-section" aria-label="Closing statement">
+                <div id="final-cta-inner">
+                    <p class="section-overline final-cta-overline">WHAT&#8217;S NEXT</p>
+                    <h2 id="final-cta-heading">The best work is<br>still ahead.</h2>
+                    <p id="final-cta-subtext">I&#8217;m 16 and just getting started. Whether you want to follow along, collaborate, or just say hi. I&#8217;m easy to find.</p>
+                    <div id="final-cta-buttons">
+                        <a href="https://x.com/OliwierMako" class="final-cta-btn-primary" target="_blank" rel="noopener noreferrer">Find me on X &rarr;</a>
+                        <a href="https://github.com/Oliwier-Dev" class="final-cta-btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
                 </div>
             </section>
+
         </main>
-    
-        <hr>
 
         <footer id="footer">
-            <div id="footer-social" aria-label="Social links">
-                <a href="https://x.com/OliwierMako" class="footer-icon-link" id="link-X-account" target="_blank" rel="noopener noreferrer" aria-label="X">
-                    <img src="./svg files/brand-x.svg" alt="" loading="lazy" decoding="async">
-                </a>
-                <a href="https://www.instagram.com/oliwier_mako/" class="footer-icon-link" id="link-Instagram-account" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <img src="./svg files/brand-instagram.svg" alt="" loading="lazy" decoding="async">
-                </a>
-                <a href="https://github.com/Oliwier-Dev" class="footer-icon-link" id="link-Github-account" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <img src="./svg files/brand-github.svg" alt="" loading="lazy" decoding="async">
-                </a>
-            </div>
-            <div id="footer-legal">
-                <h4 id="footer-headings-2">Terms & Privacy</h4>
-                <div id="footer-privacy">
-                    <a href="./other-pages/legal/privacy.html" class="simple-link" id="link-privacy-policy">Privacy Policy</a>
-                    <a href="./other-pages/legal/terms.html" class="simple-link" id="link-terms-of-service">Terms of Service</a>
+            <div id="footer-main">
+                <div class="footer-col" id="footer-brand-col">
+                    <span id="footer-brand-name">Oliwier Mako</span>
+                    <p id="footer-brand-tagline">Developer &amp; SaaS founder from Malm&ouml;, Sweden.</p>
+                    <div id="footer-social" aria-label="Social links">
+                        <a href="https://x.com/OliwierMako" class="footer-icon-link" id="link-X-account" target="_blank" rel="noopener noreferrer" aria-label="X">
+                            <img src="./svg files/brand-x.svg" alt="" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.instagram.com/oliwier_mako/" class="footer-icon-link" id="link-Instagram-account" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <img src="./svg files/brand-instagram.svg" alt="" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://github.com/Oliwier-Dev" class="footer-icon-link" id="link-Github-account" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <img src="./svg files/brand-github.svg" alt="" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-heading">Zarvalo</h4>
+                    <nav class="footer-col-links" aria-label="Zarvalo links">
+                        <a href="https://zarvalo.com" target="_blank" rel="noopener noreferrer" class="footer-link">Try Zarvalo</a>
+                        <a href="https://zarvalo.com/login" target="_blank" rel="noopener noreferrer" class="footer-link">Sign Up Free</a>
+                        <a href="#zarvalo-section" class="footer-link">Learn More</a>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-heading">Legal</h4>
+                    <nav class="footer-col-links" aria-label="Legal links">
+                        <a href="./other-pages/legal/privacy.html" class="footer-link">Privacy Policy</a>
+                        <a href="./other-pages/legal/terms.html" class="footer-link">Terms of Service</a>
+                        <p class="footer-col-note">Based in Sweden &middot; GDPR compliant</p>
+                    </nav>
                 </div>
             </div>
-            <div id="footer-copyright">
+            <div id="footer-bottom">
                 <p>&copy; 2026 Oliwier Mako. All rights reserved.</p>
             </div>
         </footer>
     </div>
 </body>
 </html>
+
+
 
