@@ -1814,14 +1814,9 @@ section.section-visible {
     transform: translateY(0);
 }
 
-<<<<<<< HEAD
-/* Hero is always visible on load */
-#hero-section {
-=======
 /* Hero and Zarvalo always visible — no entrance animation */
 #hero-section,
 #zarvalo-section {
->>>>>>> 6a4b987 (Updated the website)
     opacity: 1 !important;
     transform: none !important;
 }
