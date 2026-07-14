@@ -150,14 +150,14 @@ a { color: inherit; }
 .book-contents strong { font-size: 17px; font-weight: 800; letter-spacing: -0.025em; }
 .book-contents span { color: var(--muted); font-size: 14px; line-height: 1.45; }
 .book-reader-note {
-    margin: 2.4em 0 2.9em;
+    margin: 2.4em 0 0;
     padding-left: 18px;
     border-left: 2px solid var(--ink);
     color: #3f3f3f;
 }
 .book-reader-note strong { display: block; margin-bottom: 8px; font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase; }
 .book-reader-note p { margin: 0; }
-.book-reader-note + .book-part { margin-top: 1.8em; }
+.book-reader-note + .book-part { margin-top: 0.8em; }
 .book-article h2.book-part {
     margin: 3.75em 0 1.1em;
     padding: 0.72em 0 0.2em;
