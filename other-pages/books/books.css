@@ -130,9 +130,52 @@ a { color: inherit; }
 }
 
 .book-article p { margin: 0 0 1.45em; }
-.book-article h2 { margin: 3.3em 0 0.85em; padding-top: 0.2em; font-size: clamp(29px, 4.5vw, 46px); line-height: 1; letter-spacing: -0.055em; }
-.book-article h3 { margin: 2.5em 0 0.75em; font-size: clamp(23px, 3vw, 30px); line-height: 1.08; letter-spacing: -0.045em; }
-.book-article h4 { margin: 2.3em 0 0.7em; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+.book-article h2.book-part {
+    margin: 5em 0 1.1em;
+    padding: 0.72em 0 0.2em;
+    border-top: 2px solid var(--ink);
+    font-size: clamp(40px, 6vw, 62px);
+    font-weight: 800;
+    line-height: 0.96;
+    letter-spacing: -0.065em;
+}
+.book-article h2.book-part::before {
+    content: "Part";
+    display: block;
+    margin-bottom: 0.6em;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.book-article h3.book-chapter {
+    margin: 4.25em 0 1.15em;
+    font-size: clamp(32px, 4.5vw, 48px);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.06em;
+}
+.book-article h3.book-chapter span {
+    display: block;
+    margin-bottom: 0.82em;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.book-article h4.book-marker {
+    display: inline-block;
+    margin: 3.4em 0 1em;
+    padding: 8px 10px;
+    border: 1px solid var(--ink);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-transform: uppercase;
+}
 .book-article blockquote { margin: 2.2em 0; padding-left: 20px; border-left: 2px solid var(--ink); font-size: 1.14em; font-style: italic; line-height: 1.55; }
 .book-article ul, .book-article ol { margin: 0 0 1.5em; padding-left: 1.25em; }
 .book-article li { margin-bottom: 0.45em; }
@@ -146,4 +189,6 @@ a { color: inherit; }
     .book-card { min-height: 330px; }
     .book-header { text-align: left; }
     .book-article { line-height: 1.72; }
+    .book-article h2.book-part { margin-top: 4em; }
+    .book-article h3.book-chapter { margin-top: 3.5em; }
 }
