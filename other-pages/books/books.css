@@ -130,8 +130,35 @@ a { color: inherit; }
 }
 
 .book-article p { margin: 0 0 1.45em; }
+.book-intro { margin-bottom: 2.6em; }
+.book-intro p { margin-bottom: 1em; }
+.book-contents {
+    margin: 2.5em 0;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+.book-contents h2 {
+    margin: 0 0 1.1em;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.book-contents ol { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.book-contents li { display: grid; gap: 3px; margin: 0; }
+.book-contents strong { font-size: 17px; font-weight: 800; letter-spacing: -0.025em; }
+.book-contents span { color: var(--muted); font-size: 14px; line-height: 1.45; }
+.book-reader-note {
+    margin: 2.4em 0 2.9em;
+    padding-left: 18px;
+    border-left: 2px solid var(--ink);
+    color: #3f3f3f;
+}
+.book-reader-note strong { display: block; margin-bottom: 8px; font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase; }
+.book-reader-note p { margin: 0; }
 .book-article h2.book-part {
-    margin: 5em 0 1.1em;
+    margin: 3.75em 0 1.1em;
     padding: 0.72em 0 0.2em;
     border-top: 2px solid var(--ink);
     font-size: clamp(40px, 6vw, 62px);
@@ -150,7 +177,7 @@ a { color: inherit; }
     text-transform: uppercase;
 }
 .book-article h3.book-chapter {
-    margin: 4.25em 0 1.15em;
+    margin: 2.75em 0 1.15em;
     font-size: clamp(32px, 4.5vw, 48px);
     font-weight: 800;
     line-height: 1.02;
@@ -189,6 +216,6 @@ a { color: inherit; }
     .book-card { min-height: 330px; }
     .book-header { text-align: left; }
     .book-article { line-height: 1.72; }
-    .book-article h2.book-part { margin-top: 4em; }
-    .book-article h3.book-chapter { margin-top: 3.5em; }
+    .book-article h2.book-part { margin-top: 3em; }
+    .book-article h3.book-chapter { margin-top: 2.4em; }
 }

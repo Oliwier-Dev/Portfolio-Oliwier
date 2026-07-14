@@ -8,9 +8,25 @@ function renderBook(text, target) {
   const chapterNames = new Set(['Mindset', 'Productivity', 'Money', 'Psychology', 'Life', 'Action']);
   const specialNames = new Set(['Summary', 'Reflection', 'Questions']);
   const blocks = text.replace(/\r/g, '').split(/\n\s*\n+/).map((block) => block.trim()).filter(Boolean);
+  const firstPartIndex = blocks.findIndex((block) => /^Mindset\nHow to change your mindset/.test(block));
+  const openingBlocks = firstPartIndex > 0 ? blocks.slice(0, firstPartIndex) : [];
+  const bookBlocks = firstPartIndex > 0 ? blocks.slice(firstPartIndex) : blocks;
+  const contentsIndex = openingBlocks.findIndex((block) => block === 'Contents');
+  const introBlocks = contentsIndex > 0 ? openingBlocks.slice(1, contentsIndex) : [];
+  const contentsBlocks = contentsIndex >= 0 ? openingBlocks.slice(contentsIndex + 1, -1) : [];
+  const readerNote = contentsIndex >= 0 ? openingBlocks.at(-1) : '';
   let chapterNumber = 0;
 
-  target.innerHTML = blocks.map((block) => {
+  const openingHtml = [
+    introBlocks.length ? `<div class="book-intro">${introBlocks.map((block) => `<p>${escapeHtml(block)}</p>`).join('')}</div>` : '',
+    contentsBlocks.length ? `<section class="book-contents"><h2>Contents</h2><ol>${contentsBlocks.map((block) => {
+      const lines = block.split('\n').map((line) => line.trim()).filter(Boolean);
+      return `<li><strong>${escapeHtml(lines[0])}</strong>${lines.length > 1 ? `<span>${lines.slice(1).map(escapeHtml).join(' · ')}</span>` : ''}</li>`;
+    }).join('')}</ol></section>` : '',
+    readerNote ? `<aside class="book-reader-note"><strong>Reader’s note</strong><p>${escapeHtml(readerNote)}</p></aside>` : ''
+  ].join('');
+
+  target.innerHTML = openingHtml + bookBlocks.map((block) => {
     const lines = block.split('\n').map((line) => line.trim()).filter(Boolean);
     const first = lines[0];
     const safe = lines.map(escapeHtml);
