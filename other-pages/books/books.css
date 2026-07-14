@@ -158,6 +158,7 @@ a { color: inherit; }
 .book-reader-note strong { display: block; margin-bottom: 8px; font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase; }
 .book-reader-note p { margin: 0; }
 .book-reader-note + .book-part { margin-top: 0.8em; }
+.book-article h2.book-part--first { margin-top: 0.8em; }
 .book-article h2.book-part {
     margin: 3.75em 0 1.1em;
     padding: 0.72em 0 0.2em;

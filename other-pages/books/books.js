@@ -16,6 +16,12 @@ function renderBook(text, target) {
   const contentsBlocks = contentsIndex >= 0 ? openingBlocks.slice(contentsIndex + 1, -1) : [];
   const readerNote = contentsIndex >= 0 ? openingBlocks.at(-1) : '';
   let chapterNumber = 0;
+  let partNumber = 0;
+
+  function renderPart(title) {
+    partNumber += 1;
+    return `<h2 class="book-part${partNumber === 1 ? ' book-part--first' : ''}">${escapeHtml(title)}</h2>`;
+  }
 
   const openingHtml = [
     introBlocks.length ? `<div class="book-intro">${introBlocks.map((block) => `<p>${escapeHtml(block)}</p>`).join('')}</div>` : '',
@@ -31,14 +37,14 @@ function renderBook(text, target) {
     const first = lines[0];
     const safe = lines.map(escapeHtml);
 
-    if (lines.length === 1 && chapterNames.has(first)) return `<h2 class="book-part">${safe[0]}</h2>`;
+    if (lines.length === 1 && chapterNames.has(first)) return renderPart(first);
     if (chapterNames.has(first) && lines.length > 1) {
       chapterNumber += 1;
       const title = safe[1];
       const remaining = safe.slice(2);
       const chapter = `<h3 class="book-chapter"><span>Chapter ${String(chapterNumber).padStart(2, '0')}</span>${title}</h3>`;
       const body = remaining.length ? `<p>${remaining.join('<br>')}</p>` : '';
-      return `<h2 class="book-part">${safe[0]}</h2>${chapter}${body}`;
+      return `${renderPart(first)}${chapter}${body}`;
     }
     if (lines.length === 1 && specialNames.has(first)) return `<h4 class="book-marker">${safe[0]}</h4>`;
     if (lines.length === 1 && /^[“"‘']/.test(first)) return `<blockquote>${safe[0]}</blockquote>`;
