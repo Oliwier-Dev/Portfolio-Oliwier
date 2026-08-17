@@ -20,7 +20,7 @@
     <meta name="twitter:image" content="./images/Profile pic.avif">
     <title>Oliwier Mako</title>
     <link id="site-favicon" rel="icon" href="./images/favicon/favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260817-2">
     <script src="script.js" defer></script>
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -33,7 +33,7 @@
         <div id="nav-inner">
             <a id="nav-logo" href="#">Oliwier Mako</a>
             <div id="nav-links-center">
-                <a href="#zarvalo-section" class="nav-link">Zarvalo</a>
+                <a href="#projects-section" class="nav-link">Zarvalo</a>
                 <a href="./other-pages/books/index.html" class="nav-link">Books</a>
                 <a href="#philosophy-section" class="nav-link">About</a>
             </div>
@@ -59,7 +59,7 @@
             </div>
         </div>
         <div id="nav-mobile-menu" aria-hidden="true">
-            <a href="#zarvalo-section" class="nav-mobile-link">Zarvalo</a>
+            <a href="#projects-section" class="nav-mobile-link">Zarvalo</a>
             <a href="./other-pages/books/index.html" class="nav-mobile-link">Books</a>
             <a href="#philosophy-section" class="nav-mobile-link">About</a>
             <a href="https://zarvalo.com/scraper" class="nav-mobile-link nav-mobile-cta" target="_blank" rel="noopener noreferrer">View Zarvalo Demo</a>
@@ -99,32 +99,6 @@
                 </div>
             </section>
 
-            <section id="zarvalo-section" aria-labelledby="zarvalo-heading">
-                <div id="zarvalo-section-inner">
-                    <p class="section-overline zarvalo-overline">INTERACTIVE PROJECT</p>
-                    <h2 id="zarvalo-heading">Meet Zarvalo.</h2>
-                    <p id="zarvalo-subheading">A browser-only portfolio demo of a prospecting workflow for local SEO agencies, powered entirely by synthetic data.</p>
-                    <div id="zarvalo-cards">
-                        <div class="zarvalo-card">
-                            <span class="zarvalo-card-num">01</span>
-                            <h3 class="zarvalo-card-title">What it is</h3>
-                            <p class="zarvalo-card-desc">Zarvalo demonstrates how an agency could discover, rank, review, and organize local SEO prospects in one polished workflow.</p>
-                        </div>
-                        <div class="zarvalo-card">
-                            <span class="zarvalo-card-num">02</span>
-                            <h3 class="zarvalo-card-title">How it works</h3>
-                            <p class="zarvalo-card-desc">Enter a city and niche, watch a simulated research run, then filter, sort, annotate, change statuses, and export fictional leads.</p>
-                        </div>
-                        <div class="zarvalo-card">
-                            <span class="zarvalo-card-num">03</span>
-                            <h3 class="zarvalo-card-title">Who it&#8217;s for</h3>
-                            <p class="zarvalo-card-desc">Visitors exploring my product design and engineering work. No account, live search, database, or real contact data is involved.</p>
-                        </div>
-                    </div>
-                    <a href="https://zarvalo.com/scraper" class="main-CTA-Btn-element zarvalo-cta-btn" target="_blank" rel="noopener noreferrer">View Zarvalo Demo &rarr;</a>
-                </div>
-            </section>
-
             <!-- ===== PROJECTS SECTION ===== -->
             <section id="projects-section" aria-labelledby="projects-heading">
                 <div id="projects-section-inner">
@@ -137,7 +111,37 @@
                             <h3 class="project-card-name">Zarvalo</h3>
                             <p class="project-card-tagline">A complete local SEO prospecting workflow you can actually click through.</p>
                             <p class="project-card-desc">I designed and built Zarvalo end-to-end, then preserved it as a browser-only demo using fictional data.</p>
-                            <div class="project-card-preview"><img src="./images/zarvalo-interactive-demo.jpg" alt="Zarvalo interactive scraper demo showing a synthetic lead shortlist" loading="lazy" decoding="async"></div>
+                            <div class="project-card-preview" aria-hidden="true">
+                                <div class="demo-window-bar">
+                                    <div class="demo-brand"><span class="demo-brand-mark">Z</span><span>Zarvalo</span></div>
+                                    <div class="demo-window-actions"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="demo-app-shell">
+                                    <div class="demo-sidebar">
+                                        <div class="demo-nav-item">Overview</div>
+                                        <div class="demo-nav-item is-active">Prospecting</div>
+                                        <div class="demo-nav-item">Leads</div>
+                                        <div class="demo-nav-item">Settings</div>
+                                    </div>
+                                    <div class="demo-main">
+                                        <div class="demo-main-heading">
+                                            <div><span class="demo-eyebrow">PROSPECTING</span><strong>Lead shortlist</strong></div>
+                                            <span class="demo-run-button">New search</span>
+                                        </div>
+                                        <div class="demo-metrics">
+                                            <div><span>Found</span><strong>8</strong></div>
+                                            <div><span>Qualified</span><strong>3</strong></div>
+                                            <div><span>Average score</span><strong>82</strong></div>
+                                        </div>
+                                        <div class="demo-table">
+                                            <div class="demo-table-head"><span>Business</span><span>Score</span><span>Status</span></div>
+                                            <div class="demo-table-row"><span><strong>Willow Plumbing</strong><small>Portland, Oregon</small></span><span class="demo-score">95</span><span class="demo-status">Qualified</span></div>
+                                            <div class="demo-table-row"><span><strong>Northwest Dental</strong><small>Portland, Oregon</small></span><span class="demo-score">84</span><span class="demo-status is-review">Review</span></div>
+                                            <div class="demo-table-row"><span><strong>Rose City Roofing</strong><small>Portland, Oregon</small></span><span class="demo-score">77</span><span class="demo-status is-review">Review</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="project-card-cta">
                                 <span>Open the interactive demo</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
@@ -210,7 +214,7 @@
                     <nav class="footer-col-links" aria-label="Zarvalo links">
                         <a href="https://zarvalo.com/scraper" target="_blank" rel="noopener noreferrer" class="footer-link">View Demo</a>
                         <a href="./other-pages/my-projects/index.html" class="footer-link">Project Details</a>
-                        <a href="#zarvalo-section" class="footer-link">Learn More</a>
+                        <a href="#projects-section" class="footer-link">Learn More</a>
                     </nav>
                 </div>
                 <div class="footer-col">
