@@ -80,7 +80,7 @@ Motion uses one coordinated reveal and one hover treatment. Reduced-motion mode 
 
 ## Do's and Don'ts
 
-- Do use real project states, the supplied portrait, and food photography as proof.
+- Do use real project states and the supplied portrait as proof.
 - Do let one large gesture dominate each viewport.
 - Do keep language short, specific, and conversational.
 - Don't add theme switching, gradients, glows, rounded card grids, or fake social proof.

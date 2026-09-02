@@ -12,7 +12,6 @@
   if (path.includes('/project12/')) body.classList.add('demo-page', 'reddit-demo');
   if (path.includes('/project13/')) body.classList.add('demo-page', 'converter-demo');
   if (path.includes('/project7-quiz/')) body.classList.add('demo-page', 'quiz-demo');
-  if (path.includes('/restaurant-project/')) body.classList.add('restaurant-project');
 
   if (!document.querySelector('.skip-link')) {
     const skip = document.createElement('a');
@@ -22,18 +21,10 @@
     body.prepend(skip);
   }
 
-  if (!body.classList.contains('restaurant-project')) {
-    const bar = document.createElement('header');
-    bar.className = 'subsite-bar';
-    bar.innerHTML = '<a href="/index.html">Oliwier Mako</a><nav aria-label="Portfolio navigation"><a href="/index.html#work">Work</a><a href="/index.html#websites">Websites</a><a href="/index.html#about">About</a></nav><a class="subsite-contact" href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Start a project ↗</a>';
-    body.insertBefore(bar, body.firstElementChild?.nextSibling || null);
-  } else {
-    const back = document.createElement('a');
-    back.className = 'project-back';
-    back.href = '/other-pages/my-projects/index.html';
-    back.textContent = '← Back to selected work';
-    body.prepend(back);
-  }
+  const bar = document.createElement('header');
+  bar.className = 'subsite-bar';
+  bar.innerHTML = '<a href="/index.html">Oliwier Mako</a><nav aria-label="Portfolio navigation"><a href="/index.html#work">Work</a><a href="/index.html#websites">Websites</a><a href="/index.html#about">About</a></nav><a class="subsite-contact" href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Start a project ↗</a>';
+  body.insertBefore(bar, body.firstElementChild?.nextSibling || null);
 
   if (body.classList.contains('demo-page')) {
     const main = document.querySelector('main');

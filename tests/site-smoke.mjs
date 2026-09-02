@@ -21,7 +21,7 @@ function walk(directory) {
 walk(root);
 const failures = [];
 
-if (htmlFiles.length !== 17) failures.push(`Expected 17 HTML pages, found ${htmlFiles.length}`);
+if (htmlFiles.length !== 12) failures.push(`Expected 12 HTML pages, found ${htmlFiles.length}`);
 
 for (const file of htmlFiles) {
   const source = readFileSync(file, 'utf8');
