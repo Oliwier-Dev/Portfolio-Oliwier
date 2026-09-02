@@ -1,0 +1,26 @@
+{
+  "name": "Oliwier Mako",
+  "focus": "Website design, front-end development, and digital products",
+  "process": [
+    "Direction",
+    "Structure",
+    "Visual design",
+    "Responsive development",
+    "Polish and testing"
+  ],
+  "selectedWork": [
+    {
+      "name": "Zarvalo",
+      "summary": "A local prospecting workflow designed and built end-to-end."
+    },
+    {
+      "name": "Northline Cycle Works",
+      "summary": "A self-initiated multi-page editorial website concept."
+    }
+  ],
+  "book": {
+    "title": "The Quiet Advantage",
+    "summary": "A short book about building focus in a noisy world."
+  },
+  "contact": "https://www.instagram.com/oliwiermako/"
+}

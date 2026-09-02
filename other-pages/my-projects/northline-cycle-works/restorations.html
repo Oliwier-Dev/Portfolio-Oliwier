@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A filterable restoration archive in the Northline Cycle Works website concept."
+    />
+    <title>Restorations — Northline Cycle Works</title>
+    <link rel="stylesheet" href="./northline.css?v=20260902" />
+    <script src="./northline.js?v=20260902" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nl-header">
+      <a class="nl-logo" href="./index.html">Northline Cycle Works</a>
+      <nav class="nl-nav" aria-label="Northline navigation">
+        <a href="./index.html">Overview</a><a href="./services.html">Services</a
+        ><a aria-current="page" href="./restorations.html">Restorations</a
+        ><a href="./workshop.html">Workshop</a>
+      </nav>
+      <a class="nl-contact" href="./contact.html">Start a restoration</a
+      ><button
+        class="nl-menu"
+        type="button"
+        onclick="toggleNorthlineMenu()"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+    </header>
+    <main id="main">
+      <header class="page-hero">
+        <h1>Restored stories.</h1>
+        <p>
+          A fictional archive designed to show the editorial gallery and
+          filtering interaction.
+        </p>
+      </header>
+      <section class="nl-section">
+        <div class="filter-bar" aria-label="Filter restorations">
+          <button type="button" data-filter="all" onclick="filterRestorations('all', this)" aria-pressed="true">
+            All</button
+          ><button type="button" data-filter="road" onclick="filterRestorations('road', this)" aria-pressed="false">
+            Road</button
+          ><button type="button" data-filter="touring" onclick="filterRestorations('touring', this)" aria-pressed="false">
+            Touring</button
+          ><button type="button" data-filter="city" onclick="filterRestorations('city', this)" aria-pressed="false">
+            City
+          </button>
+        </div>
+        <div class="project-grid reveal">
+          <article class="project-tile" data-category="road">
+            <picture
+              ><source srcset="/images/northline/hero.avif" type="image/avif" />
+              <img
+                src="/images/northline/hero.jpg"
+                alt="Green restored road bicycle"
+                width="1536"
+                height="1024"
+            /></picture>
+            <h2>The Alder</h2>
+            <p>Road · Full restoration</p>
+          </article>
+          <article class="project-tile" data-category="touring">
+            <picture
+              ><source srcset="/images/northline/ride.avif" type="image/avif" />
+              <img
+                src="/images/northline/ride.jpg"
+                alt="Touring bicycle on an open road"
+                width="1536"
+                height="1024"
+            /></picture>
+            <h2>The Coastline</h2>
+            <p>Touring · Rolling refresh</p>
+          </article>
+          <article class="project-tile" data-category="city">
+            <picture
+              ><source
+                srcset="/images/northline/workshop.avif"
+                type="image/avif" />
+              <img
+                src="/images/northline/workshop.jpg"
+                alt="Bicycle being restored in a workshop"
+                width="1536"
+                height="1024"
+            /></picture>
+            <h2>The Market</h2>
+            <p>City · Mechanical rebuild</p>
+          </article>
+          <article class="project-tile" data-category="road">
+            <picture
+              ><source
+                srcset="/images/northline/detail.avif"
+                type="image/avif" />
+              <img
+                src="/images/northline/detail.jpg"
+                alt="Restored road bicycle drivetrain"
+                width="1536"
+                height="1024"
+            /></picture>
+            <h2>The Ash</h2>
+            <p>Road · Preservation build</p>
+          </article>
+        </div>
+      </section>
+      <section class="contact-chapter">
+        <h2>Your bicycle,<br /><em>next.</em></h2>
+        <a href="./contact.html">Start a restoration <span>↗</span></a>
+      </section>
+    </main>
+    <footer class="nl-footer">
+      <span>Self-initiated concept by Oliwier Mako</span
+      ><a href="/other-pages/my-projects/index.html">Back to selected work</a>
+    </footer>
+  </body>
+</html>

@@ -16,66 +16,81 @@
   <meta name="twitter:image" content="./images/precision-grid/oliwier-mirror.jpg">
   <title>Oliwier Mako — Website designer & developer</title>
   <link rel="icon" href="./images/favicon/favicon.png" type="image/png">
-  <link rel="stylesheet" href="style.css?v=20260901">
+  <link rel="stylesheet" href="style.css?v=20260902">
   <script src="script.js?v=20260902" defer></script>
   <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="cursor" aria-hidden="true"><span>View</span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-ring"></span><span class="cursor-dot"></span></div>
 
   <header class="site-header" data-header>
     <a class="wordmark" href="#top" aria-label="Oliwier Mako, home">Oliwier Mako</a>
     <nav class="desktop-nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#websites">Websites</a><a href="#about">About</a></nav>
-    <a class="button button--small header-cta" href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Start a project</a>
+    <a class="button button--small header-cta" href="https://www.instagram.com/oliwiermako/" target="_blank" rel="noopener noreferrer">Start a project</a>
     <button class="menu-button" type="button" onclick="toggleMenu()" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
-    <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true"><a href="#work">Work</a><a href="#websites">Websites</a><a href="#about">About</a><a href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Start a project ↗</a></nav>
+    <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true"><a href="#work">Work</a><a href="#websites">Websites</a><a href="#about">About</a><a href="https://www.instagram.com/oliwiermako/" target="_blank" rel="noopener noreferrer">Start a project ↗</a></nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-meta">Independent designer & developer <span>Available for selected projects</span></div>
       <h1 id="hero-title"><span>Oliwier</span><span>Mako</span></h1>
       <img class="hero-object" src="./images/precision-grid/glass-ribbon.png" alt="" width="1024" height="1536" fetchpriority="high">
-      <div class="hero-copy"><p>I design and build thoughtful websites and digital products.</p><a class="button" href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Start a project <span aria-hidden="true">↗</span></a></div>
-      <a class="hero-next" href="#work"><span>Selected work</span><span aria-hidden="true">↓</span></a>
+      <div class="hero-copy"><p>I design and build thoughtful websites and digital products.</p><a class="button" href="https://www.instagram.com/oliwiermako/" target="_blank" rel="noopener noreferrer">Start a project <span aria-hidden="true">↗</span></a></div>
+      <a class="hero-next" href="#work"><span>See the work</span><span aria-hidden="true">↓</span></a>
     </section>
 
     <section class="work section" id="work" aria-labelledby="work-title">
-      <header class="section-heading reveal"><p class="section-label">Selected work</p><h2 id="work-title">Built to be used,<br>not just looked at.</h2></header>
+      <header class="section-heading reveal"><h2 id="work-title">Built to be used,<br>not just looked at.</h2></header>
       <article class="zarvalo-project reveal">
-        <div class="zarvalo-copy"><p class="project-type">Product design & development</p><h3>Zarvalo</h3><p>A complete local SEO prospecting workflow, designed and built end-to-end and preserved as an interactive browser demo.</p><a class="text-link" href="https://zarvalo.com/scraper" target="_blank" rel="noopener noreferrer">Open interactive demo <span aria-hidden="true">↗</span></a></div>
+        <div class="zarvalo-copy"><h3>Zarvalo</h3><div><p>A complete local SEO prospecting workflow, designed and built end-to-end and preserved as an interactive browser demo.</p><a class="text-link" href="https://zarvalo.com/scraper" target="_blank" rel="noopener noreferrer">Open interactive demo <span aria-hidden="true">↗</span></a></div></div>
         <a class="product-window cursor-target" href="https://zarvalo.com/scraper" target="_blank" rel="noopener noreferrer" aria-label="Open the Zarvalo interactive demo">
-          <div class="product-top"><strong><i>Z</i>Zarvalo</strong><span>Prospecting</span><span>•••</span></div>
-          <div class="product-body"><aside><b>Overview</b><b class="active">Prospecting</b><b>Leads</b><b>Settings</b></aside><div class="product-main"><header><div><small>PROSPECTING</small><strong>Lead shortlist</strong></div><button type="button" tabindex="-1" disabled>New search</button></header><div class="metrics"><p><span>Found</span><b>8</b></p><p><span>Qualified</span><b>3</b></p><p><span>Average score</span><b>82</b></p></div><div class="lead-table"><div><span>Willow Plumbing</span><b>95</b><em>Qualified</em></div><div><span>Northwest Dental</span><b>84</b><em>Review</em></div><div><span>Rose City Roofing</span><b>77</b><em>Review</em></div></div></div></div>
+          <div class="product-top"><strong><i>Z</i>Zarvalo</strong><span>Prospecting</span><span aria-hidden="true">•••</span></div>
+          <div class="product-body">
+            <aside aria-hidden="true"><b>Dashboard</b><b class="active">Prospecting</b><b>Spreadsheet</b><b>Settings</b></aside>
+            <div class="product-main">
+              <header><strong>Find prospects</strong><span>Dentists · Austin, Texas</span></header>
+              <div class="product-search"><span>Dentists</span><span>Austin, Texas</span><b>20 leads</b><i>Search</i></div>
+              <div class="metrics"><p><span>Found</span><b>20</b></p><p><span>Qualified</span><b>8</b></p><p><span>Average score</span><b>86</b></p></div>
+              <div class="lead-table"><div><span>Juniper Dentist Studio</span><b>94</b><em>Qualified</em></div><div><span>Willow Dentist Solutions</span><b>94</b><em>Qualified</em></div><div><span>Harbor Dentist Clinic</span><b>88</b><em>Review</em></div></div>
+            </div>
+          </div>
         </a>
       </article>
+
       <div class="work-grid reveal">
-        <a class="work-card cursor-target" href="./other-pages/my-projects/ai-chat-project/index.html"><figure class="assistant-preview"><span>Ask something useful.</span><div>How can I improve my website?</div><i>Send ↗</i></figure><div><h3>AI FAQ Assistant</h3><p>Interface & front-end development</p><span aria-hidden="true">↗</span></div></a>
+        <a class="work-card work-card--northline cursor-target" href="./other-pages/my-projects/northline-cycle-works/index.html">
+          <figure><picture><source srcset="./images/northline/hero.avif" type="image/avif"><img src="./images/northline/hero.jpg" alt="Restored forest-green road bicycle in a quiet workshop" width="1536" height="1024" loading="lazy"></picture></figure>
+          <div><h3>Northline Cycle Works</h3><p>A five-page editorial concept for a bicycle restoration atelier.</p><span aria-hidden="true">↗</span></div>
+        </a>
+        <a class="work-card work-card--assistant cursor-target" href="./other-pages/my-projects/ai-chat-project/index.html">
+          <figure class="assistant-preview"><span>Ask Oliwier.</span><div>What kind of websites do you build?</div><i>Connection coming soon</i></figure>
+          <div><h3>Ask Oliwier</h3><p>A provider-ready conversational portfolio interface.</p><span aria-hidden="true">↗</span></div>
+        </a>
       </div>
-      <a class="all-work-link" href="./other-pages/my-projects/index.html">View all work <span aria-hidden="true">↗</span></a>
+      <a class="all-work-link" href="./other-pages/my-projects/index.html">View the complete selection <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="services section" id="websites" aria-labelledby="services-title">
-      <p class="section-label reveal">Websites</p><div class="services-intro reveal"><h2 id="services-title">Websites that<br><em>feel considered.</em></h2><p>I design and build responsive websites with clear structure, deliberate interaction, and the technical detail to hold up after launch.</p></div>
+      <div class="services-intro reveal"><h2 id="services-title">Websites that<br><em>feel considered.</em></h2><p>I design and build responsive websites with clear structure, deliberate interaction, and the technical detail to hold up after launch.</p></div>
       <div class="capability-row reveal" aria-label="Capabilities"><span>Direction</span><span>Design</span><span>Development</span><span>Responsive polish</span></div>
-      <a class="button services-button reveal" href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Start a project <span aria-hidden="true">↗</span></a>
+      <a class="button services-button reveal" href="https://www.instagram.com/oliwiermako/" target="_blank" rel="noopener noreferrer">Start a project <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="about section" id="about" aria-labelledby="about-title">
-      <div class="about-photo reveal"><img src="./images/precision-grid/oliwier-mirror.jpg" alt="Oliwier Mako taking a mirror photograph" loading="lazy" width="3024" height="4032"></div>
-      <div class="about-copy reveal"><p class="section-label">About</p><h2 id="about-title">I care about<br>the whole thing.</h2><p>I started with websites because I wanted to understand how the internet works. Now I care about the full process: the idea, the interface, the code, and whether it is genuinely useful.</p><p>Outside the browser, I’m usually learning, building something, or trying to make it simpler.</p></div>
+      <div class="about-photo reveal" data-parallax><img src="./images/precision-grid/oliwier-mirror.jpg" alt="Oliwier Mako taking a mirror photograph" loading="lazy" width="3024" height="4032"></div>
+      <div class="about-copy reveal"><h2 id="about-title">I care about<br>the whole thing.</h2><p>I started with websites because I wanted to understand how the internet works. Now I care about the full process: the idea, the interface, the code, and whether it is genuinely useful.</p><p>Outside the browser, I’m usually learning, building something, or trying to make it simpler.</p></div>
     </section>
 
     <section class="book section" aria-labelledby="book-title">
       <div class="book-cover reveal"><span>THE QUIET</span><strong>ADVANTAGE</strong><small>OLIWIER MAKO</small></div>
-      <div class="book-copy reveal"><p class="section-label">The book</p><h2 id="book-title">Notes on thinking independently.</h2><p>An early book about mindset, work, money, and learning—kept honest, then made clearer.</p><div class="book-links"><a href="./other-pages/books/polished/index.html">Read the polished edition <span>↗</span></a><a href="./other-pages/books/original/index.html">Read the original draft <span>↗</span></a></div></div>
+      <div class="book-copy reveal"><h2 id="book-title">Notes on thinking independently.</h2><p>An early book about mindset, work, money, and learning—kept honest, then made clearer.</p><div class="book-links"><a href="./other-pages/books/polished/index.html">Read the polished edition <span>↗</span></a><a href="./other-pages/books/original/index.html">Read the original draft <span>↗</span></a></div></div>
     </section>
 
-    <section class="contact section" aria-labelledby="contact-title"><p class="section-label reveal">Start a conversation</p><h2 id="contact-title" class="reveal">Have a website<br><em>in mind?</em></h2><a class="contact-link reveal" href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Tell me about it <span aria-hidden="true">↗</span></a></section>
+    <section class="contact section" aria-labelledby="contact-title"><h2 id="contact-title" class="reveal">Have a website<br><em>in mind?</em></h2><a class="contact-link reveal" href="https://www.instagram.com/oliwiermako/" target="_blank" rel="noopener noreferrer">Tell me about it <span aria-hidden="true">↗</span></a></section>
   </main>
 
-  <footer class="site-footer"><a href="#top">Oliwier Mako</a><nav aria-label="Social links"><a href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://github.com/Oliwier-Dev" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://x.com/OliwierMako" target="_blank" rel="noopener noreferrer">X</a></nav><nav aria-label="Legal"><a href="./other-pages/legal/privacy.html">Privacy</a><a href="./other-pages/legal/terms.html">Terms</a></nav><p>© 2026</p></footer>
+  <footer class="site-footer"><a href="#top">Oliwier Mako</a><nav aria-label="Social links"><a href="https://www.instagram.com/oliwiermako/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://github.com/Oliwier-Dev" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://x.com/OliwierMako" target="_blank" rel="noopener noreferrer">X</a></nav><nav aria-label="Legal"><a href="./other-pages/legal/privacy.html">Privacy</a><a href="./other-pages/legal/terms.html">Terms</a></nav><p>© 2026</p></footer>
 </body>
 </html>

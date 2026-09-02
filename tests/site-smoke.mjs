@@ -21,7 +21,7 @@ function walk(directory) {
 walk(root);
 const failures = [];
 
-if (htmlFiles.length !== 12) failures.push(`Expected 12 HTML pages, found ${htmlFiles.length}`);
+if (htmlFiles.length !== 17) failures.push(`Expected 17 HTML pages, found ${htmlFiles.length}`);
 
 for (const file of htmlFiles) {
   const source = readFileSync(file, 'utf8');
@@ -42,12 +42,32 @@ for (const file of htmlFiles) {
 }
 
 const portfolioSources = htmlFiles
-  .filter((file) => !file.includes(`${join('books', 'content')}`))
+  .filter((file) => !file.includes(`${join('legal', '')}`) && !file.includes(`${join('books', 'content')}`))
   .map((file) => readFileSync(file, 'utf8'))
   .join('\n');
 
-for (const pattern of [/16[- ]?year/gi, /16 years old/gi, /cdn\.tailwindcss\.com/gi, /network-background/gi, /switchThemeBtn/gi]) {
+for (const pattern of [/\b(?:1[5-9]|twenty)[- ]?(?:year|years)[- ]?old\b/gi, /cdn\.tailwindcss\.com/gi, /network-background/gi, /switchThemeBtn/gi, /oliwier_mako/gi, /vellaro/gi]) {
   if (pattern.test(portfolioSources)) failures.push(`Forbidden active-page pattern: ${pattern}`);
+}
+
+const home = readFileSync(join(root, 'index.html'), 'utf8');
+for (const required of ['Northline Cycle Works', 'Ask Oliwier', 'https://www.instagram.com/oliwiermako/']) {
+  if (!home.includes(required)) failures.push(`Homepage missing required content: ${required}`);
+}
+
+const workIndex = readFileSync(join(root, 'other-pages', 'my-projects', 'index.html'), 'utf8');
+for (const hiddenProject of ['Task Tracker', 'Reddit Client', 'Temperature Converter', 'Flash Cards Quiz']) {
+  if (workIndex.includes(hiddenProject)) failures.push(`Work index exposes hidden earlier build: ${hiddenProject}`);
+}
+
+const assistantScript = readFileSync(join(root, 'other-pages', 'my-projects', 'ai-chat-project', 'script.js'), 'utf8');
+if (/kb\.json|keyword|rankedarray/i.test(assistantScript)) failures.push('Ask Oliwier still contains simulated keyword-answer logic');
+const assistantPage = readFileSync(join(root, 'other-pages', 'my-projects', 'ai-chat-project', 'index.html'), 'utf8');
+if (!/LLM connection coming soon/i.test(assistantPage) || !/disabled/i.test(assistantPage)) failures.push('Ask Oliwier does not expose an honest disabled connection state');
+
+for (const page of ['index.html', 'services.html', 'restorations.html', 'workshop.html', 'contact.html']) {
+  const northlinePath = join(root, 'other-pages', 'my-projects', 'northline-cycle-works', page);
+  if (!existsSync(northlinePath)) failures.push(`Missing Northline route: ${page}`);
 }
 
 for (const file of jsFiles) {

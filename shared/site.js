@@ -22,20 +22,21 @@
   }
 
   const bar = document.createElement('header');
-  bar.className = 'subsite-bar';
-  bar.innerHTML = '<a href="/index.html">Oliwier Mako</a><nav aria-label="Portfolio navigation"><a href="/index.html#work">Work</a><a href="/index.html#websites">Websites</a><a href="/index.html#about">About</a></nav><a class="subsite-contact" href="https://www.instagram.com/oliwier_mako/" target="_blank" rel="noopener noreferrer">Start a project ↗</a>';
+  bar.className = 'site-header shared-header';
+  bar.innerHTML = '<a class="wordmark" href="/index.html" aria-label="Oliwier Mako, home">Oliwier Mako</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/index.html#work">Work</a><a href="/index.html#websites">Websites</a><a href="/index.html#about">About</a></nav><a class="button button--small header-cta" href="https://www.instagram.com/oliwiermako/" target="_blank" rel="noopener noreferrer">Start a project</a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="shared-mobile-menu"><span></span><span></span></button><nav class="mobile-nav" id="shared-mobile-menu" aria-label="Mobile navigation" aria-hidden="true"><a href="/index.html#work">Work</a><a href="/index.html#websites">Websites</a><a href="/index.html#about">About</a><a href="https://www.instagram.com/oliwiermako/" target="_blank" rel="noopener noreferrer">Start a project ↗</a></nav>';
   body.insertBefore(bar, body.firstElementChild?.nextSibling || null);
 
-  if (body.classList.contains('demo-page')) {
-    const main = document.querySelector('main');
-    if (main) {
-      const title = document.title.replace(/\s*[—|-].*$/, '');
-      const intro = document.createElement('header');
-      intro.className = 'demo-intro';
-      intro.innerHTML = `<p>Earlier build · Interactive demo</p><h1>${title}</h1>`;
-      main.prepend(intro);
-    }
-  }
+  const menuButton = bar.querySelector('.menu-button');
+  const mobileMenu = bar.querySelector('.mobile-nav');
+  const setMenu = (open) => {
+    menuButton?.setAttribute('aria-expanded', String(open));
+    menuButton?.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    mobileMenu?.setAttribute('aria-hidden', String(!open));
+    mobileMenu?.classList.toggle('is-open', open);
+  };
+  menuButton?.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+  mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenu(false); });
 
   if (body.classList.contains('books-page') && document.querySelector('.book-article')) {
     const progress = document.createElement('div');
