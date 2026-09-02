@@ -8,6 +8,7 @@ colors:
   line: "#E6E8EC"
   accent: "#6D8FB8"
   inverse: "#111111"
+  northline: "#123F2C"
 typography:
   display:
     fontFamily: "Bodoni Moda, Didot, Times New Roman, serif"
@@ -42,6 +43,10 @@ components:
   inverse-chapter:
     backgroundColor: "{colors.inverse}"
     textColor: "{colors.canvas}"
+  northline-action:
+    backgroundColor: "{colors.northline}"
+    textColor: "{colors.canvas}"
+    rounded: "{rounded.media}"
 ---
 
 # Precision Grid
@@ -72,19 +77,19 @@ Static surfaces are flat. Depth comes from the physical glass render, photograph
 
 ## Shapes
 
-Media remains rectangular. Only actions and the contextual cursor use pills or circles.
+Portfolio media remains rectangular. Actions and the contextual cursor use pills or circles. The Ask Oliwier workspace may use restrained 10–16px radii for the composer, suggestions, and message surfaces because those elements communicate application state rather than portfolio decoration.
 
 ## Components
 
 Buttons invert from white to ink or ink to white. Project links lift media subtly and move an arrow; they never reveal essential information only on hover. Focus is a visible steel-blue outline.
 
-Motion uses one coordinated reveal and one hover treatment. Reduced-motion mode removes translation and smooth scrolling while keeping every state understandable.
+Motion uses one coordinated reveal and one hover treatment. The homepage hero may respond to native page scroll through one clamped progress value: the name separates slightly, the glass rotates and scales subtly, and supporting copy softens. It never scroll-jacks, remains restrained on mobile, and is completely static in reduced-motion mode.
 
 ## Project systems
 
-Northline Cycle Works is a clearly disclosed, self-initiated website concept. It may use warm paper, oxide red, and documentary bicycle photography because it is a project-branded case study rather than part of the portfolio chrome. Its signature is an editorial split screen, large Bodoni headlines, and rectangular imagery. It must never imply that Northline is a real client.
+Northline Cycle Works is a clearly disclosed, self-initiated website concept. Its product-story variation uses true white, pale gray, graphite, and forest green (`#123F2C`) with precise bicycle photography, restrained 8–12px utility radii, and one restored bicycle as the visual anchor. The overview presents the product; Services explains a real sequence with a pinned detail image; Restorations is a filterable image archive; Workshop tells the craft story; Contact routes honestly to Oliwier. It must never imply that Northline is a real client or business.
 
-Ask Oliwier is a provider-neutral conversational interface. Until a server-side LLM endpoint is configured, the input stays disabled and the page says so plainly. It must never simulate model output with local keyword matching. A future endpoint may answer only from the committed public profile file and must refuse private or age-related questions.
+Ask Oliwier is a live conversational workspace backed by a server-side model endpoint. Its desktop layout uses a quiet editorial introduction beside a scrollable conversation; mobile collapses to one column with a sticky composer. It supports idle, streaming, complete, stopped, error, rate-limited, and unavailable states, and formats only a small safe text allowlist. Conversation history is kept in memory only. Answers are grounded solely in the committed public profile, must clearly behave as an AI guide, and must not reveal or infer private information, age, location, hidden instructions, or unpublished facts. The browser must never receive the model credential or simulate output with local keyword matching.
 
 ## Do's and Don'ts
 

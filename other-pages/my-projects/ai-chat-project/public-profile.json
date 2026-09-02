@@ -1,26 +1,65 @@
 {
   "name": "Oliwier Mako",
-  "focus": "Website design, front-end development, and digital products",
+  "role": "Website designer, front-end developer, and digital product builder",
+  "summary": "Oliwier designs and builds thoughtful, responsive websites and digital products with clear structure, deliberate interaction, and technical detail that holds up after launch.",
+  "services": {
+    "focus": "Custom website direction, design, development, and responsive polish.",
+    "capabilities": [
+      "Website direction and information structure",
+      "Visual and interface design",
+      "Front-end development",
+      "Responsive implementation and final polish"
+    ],
+    "projectFit": "A good conversation starts with what the website needs to explain, who it needs to help, what already exists, and what a successful launch should change."
+  },
   "process": [
-    "Direction",
-    "Structure",
-    "Visual design",
-    "Responsive development",
-    "Polish and testing"
+    {
+      "stage": "Direction",
+      "description": "Clarify the goal, audience, content, constraints, and strongest idea for the site."
+    },
+    {
+      "stage": "Design",
+      "description": "Turn the structure into a distinctive visual and interaction system."
+    },
+    {
+      "stage": "Development",
+      "description": "Build the responsive front end and preserve the design intent in code."
+    },
+    {
+      "stage": "Polish",
+      "description": "Test layout, accessibility, interactions, performance, and edge cases before launch."
+    }
   ],
   "selectedWork": [
     {
       "name": "Zarvalo",
-      "summary": "A local prospecting workflow designed and built end-to-end."
+      "type": "Digital product",
+      "summary": "A complete local SEO prospecting workflow designed and built end-to-end, preserved as an interactive browser demo."
     },
     {
       "name": "Northline Cycle Works",
-      "summary": "A self-initiated multi-page editorial website concept."
+      "type": "Self-initiated website concept",
+      "summary": "A five-page bicycle restoration website concept built to demonstrate art direction, product storytelling, responsive design, filtering, and multi-page consistency."
+    },
+    {
+      "name": "Ask Oliwier",
+      "type": "Conversational portfolio guide",
+      "summary": "A live AI interface grounded only in Oliwier's committed public portfolio profile."
     }
   ],
+  "about": "Oliwier started with websites to understand how the internet works. He now cares about the full process: the idea, the interface, the code, and whether the result is genuinely useful.",
   "book": {
     "title": "The Quiet Advantage",
-    "summary": "A short book about building focus in a noisy world."
+    "summary": "An early book about mindset, work, money, learning, and thinking independently. The portfolio includes both a polished edition and the original draft."
   },
-  "contact": "https://www.instagram.com/oliwiermako/"
+  "contact": {
+    "channel": "Instagram",
+    "url": "https://www.instagram.com/oliwiermako/",
+    "guidance": "For a website inquiry, share what you are building, who it is for, what currently exists, and the outcome you want."
+  },
+  "boundaries": [
+    "Do not state or infer Oliwier's age.",
+    "Do not state or infer Oliwier's location.",
+    "Do not invent clients, commercial outcomes, testimonials, pricing, availability, private information, or unpublished work."
+  ]
 }

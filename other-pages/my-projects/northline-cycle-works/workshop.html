@@ -1,98 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta
-      name="description"
-      content="The approach behind the fictional Northline Cycle Works restoration atelier."
-    />
-    <title>Workshop — Northline Cycle Works</title>
-    <link rel="stylesheet" href="./northline.css?v=20260902" />
-    <script src="./northline.js?v=20260902" defer></script>
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <header class="nl-header">
-      <a class="nl-logo" href="./index.html">Northline Cycle Works</a>
-      <nav class="nl-nav" aria-label="Northline navigation">
-        <a href="./index.html">Overview</a><a href="./services.html">Services</a
-        ><a href="./restorations.html">Restorations</a
-        ><a aria-current="page" href="./workshop.html">Workshop</a>
-      </nav>
-      <a class="nl-contact" href="./contact.html">Start a restoration</a
-      ><button
-        class="nl-menu"
-        type="button"
-        onclick="toggleNorthlineMenu()"
-        aria-label="Open navigation"
-        aria-expanded="false"
-      >
-        Menu
-      </button>
-    </header>
-    <main id="main">
-      <header class="page-hero">
-        <h1>Slow work. Clear judgement.</h1>
-        <p>
-          The workshop page gives the fictional brand a point of view without
-          inventing a founder biography.
-        </p>
-      </header>
-      <section class="full-image">
-        <picture
-          ><source srcset="/images/northline/workshop.avif" type="image/avif" />
-          <img
-            src="/images/northline/workshop.jpg"
-            alt="Warm bicycle workshop with a mechanic at work"
-            width="1536"
-            height="1024"
-        /></picture>
-      </section>
-      <section class="nl-section">
-        <div class="nl-intro reveal">
-          <p>
-            A restoration should feel faithful to the bicycle, honest about what
-            changed, and effortless once it reaches the <em>road.</em>
-          </p>
-        </div>
-      </section>
-      <section class="nl-section image-pair reveal">
-        <figure>
-          <picture
-            ><source srcset="/images/northline/detail.avif" type="image/avif" />
-            <img
-              src="/images/northline/detail.jpg"
-              alt="Close-up of precise bicycle restoration work"
-              width="1536"
-              height="1024"
-          /></picture>
-          <figcaption>
-            <span>Measured before replaced</span><span>01</span>
-          </figcaption>
-        </figure>
-        <figure>
-          <picture
-            ><source srcset="/images/northline/ride.avif" type="image/avif" />
-            <img
-              src="/images/northline/ride.jpg"
-              alt="A restored bicycle being ridden outdoors"
-              width="1536"
-              height="1024"
-          /></picture>
-          <figcaption>
-            <span>Tested where it matters</span><span>02</span>
-          </figcaption>
-        </figure>
-      </section>
-      <section class="contact-chapter">
-        <h2>Keep the<br /><em>story moving.</em></h2>
-        <a href="./contact.html">Discuss your bicycle <span>↗</span></a>
-      </section>
-    </main>
-    <footer class="nl-footer">
-      <span>Self-initiated concept by Oliwier Mako</span
-      ><a href="/other-pages/my-projects/index.html">Back to selected work</a>
-    </footer>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The clean workshop and craft story behind the Northline Cycle Works website concept.">
+  <title>Workshop — Northline Cycle Works</title>
+  <link rel="stylesheet" href="./northline.css?v=20260903">
+  <script src="./northline.js?v=20260903" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nl-header">
+    <a class="nl-logo" href="./index.html" aria-label="Northline Cycle Works, overview">NORTHLINE<small>CYCLE WORKS</small></a>
+    <nav class="nl-nav" aria-label="Northline navigation"><a href="./index.html">Overview</a><a href="./restorations.html">Restorations</a><a href="./services.html">Services</a><a aria-current="page" href="./workshop.html">Workshop</a></nav>
+    <a class="nl-contact" href="./contact.html">Start a restoration</a>
+    <button class="nl-menu" type="button" onclick="toggleNorthlineMenu()" aria-label="Open navigation" aria-expanded="false">Menu</button>
+  </header>
+  <main id="main">
+    <section class="workshop-hero" aria-labelledby="workshop-title">
+      <picture><source srcset="/images/northline/workshop-clean.avif" type="image/avif"><img src="/images/northline/workshop-clean.jpg" alt="Bright, orderly bicycle workshop with a forest-green frame on a stand" width="1536" height="1024" fetchpriority="high"></picture>
+      <div class="workshop-hero__copy"><h1 id="workshop-title">A clear bench makes room for better judgement.</h1><p>Every tool has a purpose. Every part stays visible. Every decision can be explained.</p></div>
+    </section>
+    <section class="nl-section craft-grid">
+      <picture class="reveal"><source srcset="/images/northline/frame-detail.avif" type="image/avif"><img src="/images/northline/frame-detail.jpg" alt="Detailed view of a restored bicycle head tube and front brake" width="1672" height="941" loading="lazy"></picture>
+      <div class="craft-copy reveal"><h2>Care shows up in what disappears.</h2><p>A cable route that looks inevitable. A bearing that turns without announcing itself. Paint that protects the frame without hiding its construction.</p><p>The visual language is intentionally quiet because the bicycle—not the workshop—should hold the attention.</p><a class="nl-link" href="./services.html">See the process <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="nl-section image-story">
+      <figure class="reveal"><picture><source srcset="/images/northline/ride-context.avif" type="image/avif"><img src="/images/northline/ride-context.jpg" alt="Restored forest-green bicycle ready to ride beside a white wall" width="1536" height="1024" loading="lazy"></picture><figcaption><span>After the bench</span><span>Tested in context</span></figcaption></figure>
+      <figure class="reveal"><picture><source srcset="/images/northline/bike-hero.avif" type="image/avif"><img src="/images/northline/bike-hero.jpg" alt="Complete restored forest-green bicycle" width="1536" height="1024" loading="lazy"></picture><figcaption><span>Final handover</span><span>Only what matters</span></figcaption></figure>
+    </section>
+    <section class="contact-band"><h2>Keep the story moving.</h2><a href="./contact.html">Start a restoration <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="nl-footer"><span>This is a self-initiated concept by Oliwier Mako.</span><a href="/other-pages/my-projects/index.html">Back to selected work</a></footer>
+</body>
 </html>

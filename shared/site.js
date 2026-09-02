@@ -7,7 +7,7 @@
   if (path.includes('/books/')) body.classList.add('books-page');
   if (path.includes('/legal/')) body.classList.add('legal-page');
   if (path.endsWith('/my-projects/') || path.endsWith('/my-projects/index.html')) body.classList.add('projects-index');
-  if (path.includes('/ai-chat-project/')) body.classList.add('demo-page', 'ai-demo');
+  if (path.includes('/ai-chat-project/')) body.classList.add('ask-oliwier');
   if (path.includes('/project11-tasktracker/')) body.classList.add('demo-page', 'task-demo');
   if (path.includes('/project12/')) body.classList.add('demo-page', 'reddit-demo');
   if (path.includes('/project13/')) body.classList.add('demo-page', 'converter-demo');

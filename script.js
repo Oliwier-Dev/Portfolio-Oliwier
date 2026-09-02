@@ -3,6 +3,23 @@ const mobileMenu = document.querySelector('.mobile-nav');
 const cursor = document.querySelector('.cursor');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const scrollHero = document.querySelector('[data-scroll-hero]');
+if (scrollHero && !reduceMotion) {
+  let heroFrame = 0;
+  const updateHeroProgress = () => {
+    heroFrame = 0;
+    const distance = Math.max(innerHeight * 0.72, 520);
+    const progress = Math.min(1, Math.max(0, scrollY / distance));
+    scrollHero.style.setProperty('--hero-progress', progress.toFixed(4));
+  };
+  const requestHeroUpdate = () => {
+    if (!heroFrame) heroFrame = requestAnimationFrame(updateHeroProgress);
+  };
+  addEventListener('scroll', requestHeroUpdate, { passive: true });
+  addEventListener('resize', requestHeroUpdate, { passive: true });
+  updateHeroProgress();
+}
+
 function closeMenu() {
   if (!menuButton || !mobileMenu) return;
   menuButton.setAttribute('aria-expanded', 'false');

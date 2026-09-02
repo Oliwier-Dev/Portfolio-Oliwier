@@ -63,7 +63,22 @@ for (const hiddenProject of ['Task Tracker', 'Reddit Client', 'Temperature Conve
 const assistantScript = readFileSync(join(root, 'other-pages', 'my-projects', 'ai-chat-project', 'script.js'), 'utf8');
 if (/kb\.json|keyword|rankedarray/i.test(assistantScript)) failures.push('Ask Oliwier still contains simulated keyword-answer logic');
 const assistantPage = readFileSync(join(root, 'other-pages', 'my-projects', 'ai-chat-project', 'index.html'), 'utf8');
-if (!/LLM connection coming soon/i.test(assistantPage) || !/disabled/i.test(assistantPage)) failures.push('Ask Oliwier does not expose an honest disabled connection state');
+if (!/\/api\/ask/i.test(assistantScript) || !/id=["']stop-button["']/i.test(assistantPage) || !/id=["']retry-button["']/i.test(assistantPage)) failures.push('Ask Oliwier is missing its live streaming controls');
+if (/localStorage|sessionStorage|innerHTML|insertAdjacentHTML/i.test(assistantScript)) failures.push('Ask Oliwier uses forbidden persistence or unsafe HTML rendering');
+
+const askApiPath = join(root, 'api', 'ask.js');
+if (!existsSync(askApiPath)) failures.push('Missing Ask Oliwier server endpoint');
+else {
+  const askApi = readFileSync(askApiPath, 'utf8');
+  for (const required of ['openai/gpt-oss-120b', 'max_completion_tokens: 2048', "reasoning_effort: 'medium'", 'GROQ_API_KEY', 'public-profile.json']) {
+    if (!askApi.includes(required)) failures.push(`Ask API missing contract value: ${required}`);
+  }
+}
+
+const secretPattern = /(?:gsk_|sk-proj-)[A-Za-z0-9_-]{20,}/;
+for (const file of jsFiles) {
+  if (secretPattern.test(readFileSync(file, 'utf8'))) failures.push(`${relative(root, file)}: possible committed secret`);
+}
 
 for (const page of ['index.html', 'services.html', 'restorations.html', 'workshop.html', 'contact.html']) {
   const northlinePath = join(root, 'other-pages', 'my-projects', 'northline-cycle-works', page);
