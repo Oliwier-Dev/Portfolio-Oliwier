@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vellaro - Home Page</title>
+    <meta name="description" content="Vellaro, an editorial multi-page restaurant website designed and built by Oliwier Mako.">
+    <title>Vellaro — Restaurant</title>
     <link rel="icon" type="image/x-icon" href="Images/Restaurant Favicon.png">
 
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/shared/site.css">
     <script src="js/script.js" defer></script>
+    <script src="/shared/site.js" defer></script>
 </head>
 <body>
 
@@ -32,7 +35,7 @@
     <a class="navbar-important" href="important.html">Important</a>
 
     <!-- hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <button class="hamburger" id="hamburger" type="button" onclick="toggleMobileOverlay()" aria-label="Open menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>

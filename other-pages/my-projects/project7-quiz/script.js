@@ -19,17 +19,17 @@ let userScore = 0;
 let currentQuestion = 0;
 const kb = []
 
-ui.startBtn.addEventListener("click", async () => {
+async function startQuiz() {
     switchScreen(ui.quizScreen);
     if (kb.length === 0) {
         await fetchData();
     }
     loadContent();
-});
+}
 
-ui.endQuiz.restartBtn.addEventListener("click", () => {
+function restartQuiz() {
     switchScreen(ui.startScreen);
-});
+}
 
 // Fetch data
 

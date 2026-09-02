@@ -2,8 +2,8 @@
 const hamburger = document.getElementById('hamburger');
 const overlay = document.getElementById('mobileOverlay');
 
-if (hamburger && overlay) {
-  hamburger.addEventListener('click', () => {
+function toggleMobileOverlay() {
+  if (hamburger && overlay) {
     const isOpen = overlay.classList.toggle('open');
     hamburger.classList.toggle('active', isOpen);
 
@@ -11,8 +11,10 @@ if (hamburger && overlay) {
     overlay.setAttribute('aria-hidden', String(!isOpen));
 
     document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
+  }
+}
 
+if (hamburger && overlay) {
   overlay.addEventListener('click', (e) => {
     if (e.target.tagName === 'A' || e.target === overlay) {
       overlay.classList.remove('open');
@@ -24,17 +26,6 @@ if (hamburger && overlay) {
   });
 }
 
-// Filter buttons for menu
-const filterButtons = document.querySelectorAll(".filters button");
-
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-    });
-});
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filters button');
   const dishes = document.querySelectorAll('.dish');
@@ -45,20 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     filterDishes(filterButtons[0].dataset.category);
   }
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const category = button.dataset.category;
-
-      // Update active button
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      // Filter dishes
-      filterDishes(category);
-    });
-  });
-
-  function filterDishes(category) {
+  window.filterMenu = function filterMenu(category, button) {
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
     dishes.forEach(dish => {
       if (dish.dataset.category === category) {
         dish.style.display = 'block';
@@ -66,5 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         dish.style.display = 'none';
       }
     });
+  };
+
+  function filterDishes(category) {
+    const activeButton = [...filterButtons].find(button => button.dataset.category === category);
+    if (activeButton) window.filterMenu(category, activeButton);
   }
 });

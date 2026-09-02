@@ -18,36 +18,13 @@
   <meta name="description" content="Terms of Service for Oliwier Mako's portfolio website, covering site usage, intellectual property, liability, analytics, and contact details.">
   <title>Terms of Service</title>
   <link rel="stylesheet" href="legal.css" />
+  <link rel="stylesheet" href="/shared/site.css">
+  <script defer src="/shared/site.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
-  <script>
-    (function () {
-      const THEME_STORAGE_KEY = 'portfolio-theme';
-
-      function applyThemeFromStorage() {
-        let isDarkMode = false;
-
-        try {
-          isDarkMode = localStorage.getItem(THEME_STORAGE_KEY) === 'dark';
-        } catch (_) {
-          isDarkMode = false;
-        }
-
-        document.documentElement.classList.toggle('dark-mode', isDarkMode);
-      }
-
-      applyThemeFromStorage();
-
-      window.addEventListener('storage', function (event) {
-        if (event.key === THEME_STORAGE_KEY) {
-          applyThemeFromStorage();
-        }
-      });
-    })();
-  </script>
 </head>
 <body>
   <main id="main">

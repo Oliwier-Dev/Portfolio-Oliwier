@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
+    <meta name="description" content="An earlier interactive temperature converter built by Oliwier Mako.">
+    <title>Temperature Converter — Oliwier Mako</title>
     <script src="script.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/shared/site.css">
+    <script src="/shared/site.js" defer></script>
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -16,7 +18,7 @@
         <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Temperature converter</h2>
         <p class="mt-2 text-sm text-slate-600">Enter the temperature, the units and submit</p>
 
-        <form id="form" class="mt-6 grid gap-4 sm:grid-cols-2">
+        <form id="form" novalidate class="mt-6 grid gap-4 sm:grid-cols-2">
             <div class="sm:col-span-2">
                 <label for="valueNumber" class="mb-1 block text-sm font-medium text-slate-700">Temperature value</label>
                 <input

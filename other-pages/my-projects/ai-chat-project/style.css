@@ -148,6 +148,11 @@ main {
 }
 
 /* Scrollbar styling */
+#history {
+    scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+    scrollbar-width: thin;
+}
+
 #history::-webkit-scrollbar {
     width: 8px;
 }

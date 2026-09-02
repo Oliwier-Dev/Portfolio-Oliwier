@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do list</title>
+    <meta name="description" content="An earlier interactive task tracker built by Oliwier Mako.">
+    <title>Task Tracker — Oliwier Mako</title>
     <script src="script.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/shared/site.css">
+    <script src="/shared/site.js" defer></script>
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -15,8 +17,8 @@
     <main id="main" class="flex justify-center items-center flex-col mt-4">
         <h2 class="text-xl font-semibold">Task Tracker</h2>
         <div id="inputContainer">
-            <form id="form" autocomplete="off" class="border border-gray-400 flex p-2 rounded-lg">
-                <input type="text" placeholder="Add your task" id="userInput" class="outline-none">
+            <form id="form" autocomplete="off" novalidate class="border border-gray-400 flex p-2 rounded-lg">
+                <input type="text" placeholder="Add your task" id="userInput" class="outline-none" aria-label="Task name">
                 <button id="submit" class="bg-black p-1 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

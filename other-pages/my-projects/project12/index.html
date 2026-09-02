@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit client</title>
+    <meta name="description" content="An earlier lightweight Reddit feed client built by Oliwier Mako.">
+    <title>Reddit Client — Oliwier Mako</title>
     <script src="script.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/shared/site.css">
+    <script src="/shared/site.js" defer></script>
     <style>
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -22,7 +24,7 @@
 
         <!-- Pop up open Button -->
 
-        <button id="openPopUpBtn" class="fixed bottom-5 right-5 z-50 mt-4 flex h-12 w-12 items-center justify-center self-start rounded-full border border-slate-700 bg-slate-900 text-white shadow-lg transition duration-300 hover:bg-slate-800 active:scale-95 sm:bottom-6 sm:right-6" aria-label="Add subreddit">
+        <button id="openPopUpBtn" type="button" onclick="toggleSubredditPopup()" class="fixed bottom-5 right-5 z-50 mt-4 flex h-12 w-12 items-center justify-center self-start rounded-full border border-slate-700 bg-slate-900 text-white shadow-lg transition duration-300 hover:bg-slate-800 active:scale-95 sm:bottom-6 sm:right-6" aria-label="Add subreddit" aria-expanded="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M12 5l0 14" />
@@ -39,8 +41,8 @@
             transition-all duration-300
             opacity-0 scale-95 pointer-events-none sm:p-6
             ">
-            <p class="font-semibold tracking-tight">Enter the name of the subreddit</p>
-            <form id="form" autocomplete="off" class="flex flex-col gap-3">
+            <label class="font-semibold tracking-tight" for="userInput">Enter the name of the subreddit</label>
+            <form id="form" autocomplete="off" novalidate class="flex flex-col gap-3">
                 <input type="text" id="userInput" class="rounded-lg border border-slate-300 bg-white px-3 py-2.5 outline-none transition focus:border-slate-600 focus:ring-4 focus:ring-slate-200" placeholder="Enter subreddit name">
                 <button id="addSubredditBtn" class="rounded-xl bg-slate-900 px-4 py-2 font-semibold text-white shadow transition duration-300 hover:-translate-y-[1px] hover:bg-slate-800 hover:shadow-lg active:translate-y-0">
                     Add subreddit

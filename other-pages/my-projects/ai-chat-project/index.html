@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive FAQ assistant built by Oliwier Mako using vanilla JavaScript and a local knowledge base.">
     <title>AI FAQ Assistant</title>
     <link rel="icon" type="svg" href="message.svg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/shared/site.css">
     <script src="script.js" defer></script>
+    <script src="/shared/site.js" defer></script>
 
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -15,13 +18,13 @@
 </head>
 <body>
     <main>
-        <button id="use-btn" type="button" aria-label="Open chat usage guide">
+        <button id="use-btn" type="button" onclick="openHelpPopup()" aria-label="Open chat usage guide">
             <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-help-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 16v.01" /><path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>
         </button>
 
         <div id="helpPopup" class="help-popup" aria-hidden="true" role="dialog" aria-labelledby="help-title">
             <div class="help-popup-panel">
-                <button id="closeHelpPopup" class="help-close-btn" type="button" aria-label="Close guide">
+                <button id="closeHelpPopup" class="help-close-btn" type="button" onclick="closeHelpPopup()" aria-label="Close guide">
                     <svg id="closePopUp-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
 
                     <svg id="closePopUp-icon-hover" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0062ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
@@ -46,8 +49,8 @@
         <h1 id="header">Welcome Back!</h1>
         <div id="history"></div>
         <div id="inputArea">
-            <form id="form" autocomplete="off">
-                <input type="text" id="userInput" placeholder="Type your question here...">
+            <form id="form" autocomplete="off" novalidate>
+                <input type="text" id="userInput" placeholder="Type your question here..." aria-label="Question">
                 <button id="sendMessage">
                     <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
                 </button>

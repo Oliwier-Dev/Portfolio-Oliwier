@@ -1,0 +1,15 @@
+{
+  "profile": "marketing-site",
+  "sourceRoots": ["."],
+  "locale": "en",
+  "ownership": {
+    "Select/Listbox": "native"
+  },
+  "requiredCommands": ["site"],
+  "commands": {
+    "site": "npm test"
+  },
+  "evidence": {
+    "routeAndAssetChecks": "tests/site-smoke.mjs"
+  }
+}

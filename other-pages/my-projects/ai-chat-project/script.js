@@ -19,8 +19,6 @@ async function fetchJSON() {
 }
 
 ui.form.addEventListener("submit", inputSent);
-ui.useBtn.addEventListener("click", openHelpPopup);
-ui.closeHelpPopup.addEventListener("click", closeHelpPopup);
 ui.helpPopup.addEventListener("click", (event) => {
     if (event.target === ui.helpPopup) {
         closeHelpPopup();
