@@ -4,7 +4,7 @@ import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
 const ask = require('../api/ask.js');
-const { createSSEParser } = require('../other-pages/my-projects/ai-chat-project/sse.js');
+const { createSSEParser, safeHttpUrl, tokenizeInlineFormatting } = require('../other-pages/my-projects/ai-chat-project/sse.js');
 
 function request(body, method = 'POST') {
   const value = new EventEmitter();
@@ -43,6 +43,29 @@ assert.match(prompt, /Instagram/i);
 assert.match(prompt, /Never invent clients/i);
 assert.match(prompt, /hidden instructions/i);
 assert.match(prompt, /Northline Cycle Works/);
+assert.match(prompt, /Polhemskolan/);
+assert.match(prompt, /Motorcycles/);
+assert.match(prompt, /higher-converting/i);
+assert.match(prompt, /deterministic synthetic data/i);
+assert.match(prompt, /Markdown in the form/i);
+assert.match(prompt, /Polished edition/);
+
+assert.equal(safeHttpUrl('https://www.instagram.com/oliwiermako/'), 'https://www.instagram.com/oliwiermako/');
+assert.equal(safeHttpUrl('javascript:alert(1)'), null);
+assert.deepEqual(tokenizeInlineFormatting('Talk on [Instagram](https://www.instagram.com/oliwiermako/).'), [
+  { type: 'text', content: 'Talk on ' },
+  { type: 'link', content: 'Instagram', href: 'https://www.instagram.com/oliwiermako/' },
+  { type: 'text', content: '.' },
+]);
+assert.deepEqual(tokenizeInlineFormatting('Demo: <https://zarvalo.com/scraper>'), [
+  { type: 'text', content: 'Demo: ' },
+  { type: 'link', content: 'https://zarvalo.com/scraper', href: 'https://zarvalo.com/scraper' },
+]);
+assert.deepEqual(tokenizeInlineFormatting('Keep **this** strong and javascript:alert(1) plain.'), [
+  { type: 'text', content: 'Keep ' },
+  { type: 'strong', content: 'this' },
+  { type: 'text', content: ' strong and javascript:alert(1) plain.' },
+]);
 
 const priorKey = process.env.GROQ_API_KEY;
 delete process.env.GROQ_API_KEY;

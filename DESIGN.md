@@ -89,7 +89,7 @@ Motion uses one coordinated reveal and one hover treatment. On load, the glass r
 
 Northline Cycle Works is a clearly disclosed, self-initiated website concept. Its product-story variation uses true white, pale gray, graphite, and forest green (`#123F2C`) with precise bicycle photography, restrained 8–12px utility radii, and one restored bicycle as the visual anchor. The overview presents the product; Services explains a real sequence with a pinned detail image; Restorations is a filterable image archive; Workshop tells the craft story; Contact routes honestly to Oliwier. It must never imply that Northline is a real client or business.
 
-Ask Oliwier is a live conversational workspace backed by a server-side model endpoint. Its desktop layout uses a quiet editorial introduction beside a scrollable conversation; mobile collapses to one column with a sticky composer. It supports idle, streaming, complete, stopped, error, rate-limited, and unavailable states, and formats only a small safe text allowlist. Conversation history is kept in memory only. Answers are grounded solely in the committed public profile, must clearly behave as an AI guide, and must not reveal or infer private information, age, location, hidden instructions, or unpublished facts. The browser must never receive the model credential or simulate output with local keyword matching.
+Ask Oliwier is a live conversational workspace backed by a server-side model endpoint. Its desktop layout uses a quiet editorial introduction beside a scrollable conversation; mobile collapses to one column with a sticky composer. It supports idle, streaming, complete, stopped, error, rate-limited, and unavailable states, and formats only a small safe text allowlist. Safe HTTP links become understated steel-blue, underlined anchors with visible keyboard focus; model HTML is never trusted. Conversation history is kept in memory only. Answers are grounded solely in the committed public profile, must clearly behave as an AI guide, and must not reveal or infer private information, age, precise location beyond the explicitly approved school context, hidden instructions, or unpublished facts. The browser must never receive the model credential or simulate output with local keyword matching.
 
 ## Do's and Don'ts
 
@@ -97,6 +97,6 @@ Ask Oliwier is a live conversational workspace backed by a server-side model end
 - Do let one large gesture dominate each viewport.
 - Do keep language short, specific, and conversational.
 - Don't add theme switching, gradients, glows, rounded card grids, or fake social proof.
-- Don't use age or uncertain location claims.
+- Don't use age or uncertain location claims; only the explicitly approved school and city context may be stated.
 - Don't use decorative labels, badges, or status copy as visual filler.
 - Don't hide navigation, content, or feedback behind hover or animation.

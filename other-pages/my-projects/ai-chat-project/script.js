@@ -16,17 +16,22 @@ let activeContent = '';
 let readerScrolledUp = false;
 
 function appendInlineFormatting(element, text) {
-  const expression = /\*\*(.+?)\*\*/g;
-  let cursor = 0;
-  let match;
-  while ((match = expression.exec(text))) {
-    if (match.index > cursor) element.append(document.createTextNode(text.slice(cursor, match.index)));
-    const strong = document.createElement('strong');
-    strong.textContent = match[1];
-    element.append(strong);
-    cursor = match.index + match[0].length;
+  for (const token of window.AskSSE.tokenizeInlineFormatting(text)) {
+    if (token.type === 'text') {
+      element.append(document.createTextNode(token.content));
+    } else if (token.type === 'strong') {
+      const strong = document.createElement('strong');
+      strong.textContent = token.content;
+      element.append(strong);
+    } else if (token.type === 'link') {
+      const link = document.createElement('a');
+      link.href = token.href;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = token.content;
+      element.append(link);
+    }
   }
-  if (cursor < text.length) element.append(document.createTextNode(text.slice(cursor)));
 }
 
 function renderSafeFormatting(element, value) {

@@ -10,7 +10,8 @@
       "Front-end development",
       "Responsive implementation and final polish"
     ],
-    "projectFit": "A good conversation starts with what the website needs to explain, who it needs to help, what already exists, and what a successful launch should change."
+    "projectFit": "A good conversation starts with what the website needs to explain, who it needs to help, what already exists, and what a successful launch should change.",
+    "idealClients": "Oliwier would especially like to work with people who value their own time and their customers' time, and who want either a strong new website or a more effective, higher-converting version of what they already have. The result should look excellent, feel excellent, and make the next action clear."
   },
   "process": [
     {
@@ -34,23 +35,89 @@
     {
       "name": "Zarvalo",
       "type": "Digital product",
-      "summary": "A complete local SEO prospecting workflow designed and built end-to-end, preserved as an interactive browser demo."
+      "status": "A historical product direction preserved as an interactive browser-only portfolio demo.",
+      "audience": "Local SEO agencies researching local businesses and preparing relevant outreach.",
+      "problem": "Prospecting often fragments discovery, qualification, notes, and message preparation across maps, spreadsheets, and generic outreach tools.",
+      "workflow": [
+        "Choose a business niche and location to research.",
+        "Discover local businesses from a Google Maps-style search workflow.",
+        "Review website, contact, review, ranking, and local SEO opportunity signals.",
+        "Score and prioritize businesses by visible opportunity and commercial fit.",
+        "Keep leads, evidence, status, notes, and outreach context together.",
+        "Prepare a specific outreach angle and export a focused shortlist."
+      ],
+      "whatItShows": "Product thinking, information architecture, data-heavy interface design, responsive front-end development, multi-step workflow design, filtering, state management, and explaining complex evidence clearly.",
+      "demoDisclosure": "The public demo uses deterministic synthetic data stored only in the browser. It does not perform live scraping, send outreach, require a login, or use a production database.",
+      "url": "https://zarvalo.com/scraper"
     },
     {
       "name": "Northline Cycle Works",
       "type": "Self-initiated website concept",
-      "summary": "A five-page bicycle restoration website concept built to demonstrate art direction, product storytelling, responsive design, filtering, and multi-page consistency."
+      "summary": "A five-page bicycle restoration website concept built to demonstrate art direction, product storytelling, responsive design, filtering, and multi-page consistency.",
+      "disclosure": "Northline is a fictional, self-initiated concept rather than a client business.",
+      "url": "https://oliwier-mako.vercel.app/other-pages/my-projects/northline-cycle-works/"
     },
     {
       "name": "Ask Oliwier",
       "type": "Conversational portfolio guide",
-      "summary": "A live AI interface grounded only in Oliwier's committed public portfolio profile."
+      "summary": "A live AI interface grounded only in Oliwier's committed public portfolio profile, with streamed answers and a deliberately safe formatter.",
+      "url": "https://oliwier-mako.vercel.app/other-pages/my-projects/ai-chat-project/"
     }
   ],
   "about": "Oliwier started with websites to understand how the internet works. He now cares about the full process: the idea, the interface, the code, and whether the result is genuinely useful.",
+  "education": {
+    "school": "Polhemskolan in Lund, Sweden",
+    "programme": "Teknikprogrammet, the Swedish upper-secondary technical programme",
+    "context": "Oliwier describes Polhemskolan as a highly regarded Swedish gymnasium. His studies strengthen the technical and problem-solving side of his work."
+  },
+  "personal": {
+    "interests": [
+      "Motorcycles",
+      "Spending time with other people",
+      "Learning new things that may look unrelated at first but often connect later",
+      "Making steady progress in life"
+    ],
+    "perspective": "He is curious across subjects and likes finding useful connections between design, technology, business, psychology, and everyday life."
+  },
+  "designApproach": {
+    "principle": "Oliwier studies real design patterns that are already proven to communicate and convert, then adapts those principles into a distinctive site instead of reaching for a basic template.",
+    "priorities": [
+      "Clear structure and hierarchy",
+      "A strong visual idea rather than decoration everywhere",
+      "Interaction that feels deliberate and supports the message",
+      "Responsive implementation that preserves the design intent",
+      "A useful path toward inquiry or another meaningful action"
+    ],
+    "example": "His own portfolio is an example of this approach: a restrained Precision Grid system, oversized editorial typography, generous white space, purposeful motion, and real interactive work."
+  },
+  "proofOfCapability": "The portfolio itself, Zarvalo, Northline Cycle Works, Ask Oliwier, and The Quiet Advantage are the clearest public evidence of what Oliwier can design, build, structure, and finish. They should be discussed as proof of range, not as client testimonials or guaranteed business outcomes.",
   "book": {
     "title": "The Quiet Advantage",
-    "summary": "An early book about mindset, work, money, learning, and thinking independently. The portfolio includes both a polished edition and the original draft."
+    "format": "A personal collection of lessons and working ideas rather than a definitive guide.",
+    "summary": "An early book about thinking more clearly, getting useful work done, and keeping independent judgment while learning from other people and tools.",
+    "themes": [
+      "Mindset, questioning assumptions, gratitude, and personal belief",
+      "Productivity, attention, energy, goals, momentum, and tracking your life",
+      "Learning many skills and connecting ideas across subjects",
+      "Money, intentional buying, generosity, earning, and using AI as a thinking partner",
+      "Psychology, privacy, simplicity, self-awareness, ethical persuasion, and action",
+      "Exercise, self-respect, and building practical, lasting skills"
+    ],
+    "readingNote": "The introduction asks readers to keep their own judgment, test ideas for themselves, and keep only what genuinely helps.",
+    "editions": [
+      {
+        "name": "Polished edition",
+        "url": "https://oliwier-mako.vercel.app/other-pages/books/polished/"
+      },
+      {
+        "name": "Original draft",
+        "url": "https://oliwier-mako.vercel.app/other-pages/books/original/"
+      }
+    ]
+  },
+  "portfolio": {
+    "url": "https://oliwier-mako.vercel.app/",
+    "purpose": "The portfolio introduces Oliwier as a person, explains the website work he wants to do, and lets visitors judge the quality through the site and projects themselves."
   },
   "contact": {
     "channel": "Instagram",
@@ -59,7 +126,7 @@
   },
   "boundaries": [
     "Do not state or infer Oliwier's age.",
-    "Do not state or infer Oliwier's location.",
+    "The school and city in the education section are approved public context. Do not infer a home address, precise residence, daily routine, or any other private location information.",
     "Do not invent clients, commercial outcomes, testimonials, pricing, availability, private information, or unpublished work."
   ]
 }
