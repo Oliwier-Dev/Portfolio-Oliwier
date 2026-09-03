@@ -83,7 +83,7 @@ Portfolio media remains rectangular. Actions and the contextual cursor use pills
 
 Buttons invert from white to ink or ink to white. Project links lift media subtly and move an arrow; they never reveal essential information only on hover. Focus is a visible steel-blue outline.
 
-Motion uses one coordinated reveal and one hover treatment. The homepage hero may respond to native page scroll through one clamped progress value: the name separates slightly, the glass rotates and scales subtly, and supporting copy softens. It never scroll-jacks, remains restrained on mobile, and is completely static in reduced-motion mode.
+Motion uses one coordinated reveal and one hover treatment. On load, the glass ribbon settles from a softly blurred, lowered, and rotated state before handing off to the native-scroll motion. The homepage hero may respond to page scroll through one clamped progress value: the name separates slightly, the glass rotates and scales subtly, and supporting copy softens. It never scroll-jacks, remains restrained on mobile, and is completely static in reduced-motion mode.
 
 ## Project systems
 
