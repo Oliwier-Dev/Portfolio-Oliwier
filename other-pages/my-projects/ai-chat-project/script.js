@@ -23,6 +23,10 @@ function appendInlineFormatting(element, text) {
       const strong = document.createElement('strong');
       strong.textContent = token.content;
       element.append(strong);
+    } else if (token.type === 'emphasis') {
+      const emphasis = document.createElement('em');
+      emphasis.textContent = token.content;
+      element.append(emphasis);
     } else if (token.type === 'link') {
       const link = document.createElement('a');
       link.href = token.href;

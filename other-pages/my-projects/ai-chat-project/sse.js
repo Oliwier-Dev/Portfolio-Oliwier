@@ -45,7 +45,7 @@
 
   function tokenizeInlineFormatting(value) {
     const text = String(value);
-    const expression = /(\*\*([^*\n]+)\*\*|\[([^\]\n]+)\]\(([^)\s]+)\)|<(https?:\/\/[^>\s]+)>|(https?:\/\/[^\s<]+))/g;
+    const expression = /(\*\*([^*\n]+)\*\*|\*([^*\n]+)\*|\[([^\]\n]+)\]\(([^)\s]+)\)|<(https?:\/\/[^>\s]+)>|(https?:\/\/[^\s<]+))/g;
     const tokens = [];
     let cursor = 0;
     let match;
@@ -61,10 +61,12 @@
       if (match.index > cursor) addText(text.slice(cursor, match.index));
       if (match[2]) {
         tokens.push({ type: 'strong', content: match[2] });
+      } else if (match[3]) {
+        tokens.push({ type: 'emphasis', content: match[3] });
       } else {
-        const markdownHref = match[4];
-        const angleHref = match[5];
-        let candidate = markdownHref || angleHref || match[6];
+        const markdownHref = match[5];
+        const angleHref = match[6];
+        let candidate = markdownHref || angleHref || match[7];
         let trailing = '';
         if (!markdownHref && !angleHref) {
           const clean = candidate.replace(/[.,!?;:]+$/, '');
@@ -73,7 +75,7 @@
         }
         const href = safeHttpUrl(candidate);
         if (href) {
-          tokens.push({ type: 'link', content: match[3] || candidate, href });
+          tokens.push({ type: 'link', content: match[4] || candidate, href });
           addText(trailing);
         } else {
           addText(match[0]);

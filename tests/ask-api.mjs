@@ -85,6 +85,13 @@ assert.deepEqual(tokenizeInlineFormatting('Keep **this** strong and javascript:a
   { type: 'strong', content: 'this' },
   { type: 'text', content: ' strong and javascript:alert(1) plain.' },
 ]);
+assert.deepEqual(tokenizeInlineFormatting('Read *The Quiet Advantage* and keep **this** bold.'), [
+  { type: 'text', content: 'Read ' },
+  { type: 'emphasis', content: 'The Quiet Advantage' },
+  { type: 'text', content: ' and keep ' },
+  { type: 'strong', content: 'this' },
+  { type: 'text', content: ' bold.' },
+]);
 
 const priorKey = process.env.GROQ_API_KEY;
 delete process.env.GROQ_API_KEY;
