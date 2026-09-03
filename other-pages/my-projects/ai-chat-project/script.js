@@ -247,7 +247,9 @@ async function sendQuestion(rawQuestion, { retry = false } = {}) {
         ? 'Too many requests. Wait a moment, then retry.'
         : state === 'unavailable'
           ? 'Ask Oliwier is unavailable until the model connection is configured.'
-          : error.message || 'The answer failed. Retry when you are ready.';
+          : error.message === 'Failed to fetch'
+            ? 'The connection was interrupted. Retry when you are ready.'
+            : error.message || 'The answer failed. Retry when you are ready.';
       addMessageState(activeMessage.article, message, true);
       setInterfaceState(state, message);
     }

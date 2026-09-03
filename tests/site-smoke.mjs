@@ -63,7 +63,10 @@ for (const hiddenProject of ['Task Tracker', 'Reddit Client', 'Temperature Conve
 const assistantScript = readFileSync(join(root, 'other-pages', 'my-projects', 'ai-chat-project', 'script.js'), 'utf8');
 if (/kb\.json|keyword|rankedarray/i.test(assistantScript)) failures.push('Ask Oliwier still contains simulated keyword-answer logic');
 const assistantPage = readFileSync(join(root, 'other-pages', 'my-projects', 'ai-chat-project', 'index.html'), 'utf8');
+const assistantStyles = readFileSync(join(root, 'other-pages', 'my-projects', 'ai-chat-project', 'style.css'), 'utf8');
 if (!/\/api\/ask/i.test(assistantScript) || !/id=["']stop-button["']/i.test(assistantPage) || !/id=["']retry-button["']/i.test(assistantPage)) failures.push('Ask Oliwier is missing its live streaming controls');
+if (!/id=["']send-button["'][^>]*aria-label=["']Send message["']/i.test(assistantPage) || !/class=["']icon-action send-action["']/i.test(assistantPage)) failures.push('Ask Oliwier is missing its compact accessible send control');
+if (!/\.icon-action\[hidden\]\{display:none\}/i.test(assistantStyles) || !/\.composer textarea:focus-visible\{outline:0!important\}/i.test(assistantStyles)) failures.push('Ask Oliwier composer does not preserve hidden controls or its integrated focus ring');
 if (/localStorage|sessionStorage|innerHTML|insertAdjacentHTML/i.test(assistantScript)) failures.push('Ask Oliwier uses forbidden persistence or unsafe HTML rendering');
 
 const askApiPath = join(root, 'api', 'ask.js');

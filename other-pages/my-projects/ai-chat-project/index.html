@@ -11,9 +11,9 @@
   <title>Ask Oliwier — Oliwier Mako</title>
   <link rel="icon" href="/images/favicon/favicon.png" type="image/png">
   <link rel="stylesheet" href="/shared/site.css?v=20260903">
-  <link rel="stylesheet" href="./style.css?v=20260903b">
+  <link rel="stylesheet" href="./style.css?v=20260903c">
   <script src="./sse.js?v=20260903b" defer></script>
-  <script src="./script.js?v=20260903b" defer></script>
+  <script src="./script.js?v=20260903c" defer></script>
   <script src="/shared/site.js?v=20260903" defer></script>
 </head>
 <body>
@@ -41,13 +41,19 @@
       <div class="composer-wrap">
         <form id="ask-form" class="composer" novalidate>
           <label class="visually-hidden" for="question">Ask about Oliwier’s work or process</label>
-          <textarea id="question" class="resize-none" name="question" rows="1" maxlength="800" placeholder="Ask about the work or process" autocomplete="off" aria-describedby="composer-hint connection-status"></textarea>
+          <textarea id="question" class="resize-none" name="question" rows="1" maxlength="800" placeholder="Ask about the work" autocomplete="off" aria-describedby="composer-hint connection-status"></textarea>
           <div class="composer-actions">
-            <p id="composer-hint">Enter to send · Shift + Enter for a new line</p>
-            <div>
-              <button id="retry-button" class="secondary-action" type="button" hidden disabled>Retry</button>
-              <button id="stop-button" class="secondary-action" type="button" hidden disabled><span aria-hidden="true">■</span> Stop</button>
-              <button id="send-button" class="send-action" type="submit" disabled>Send <span aria-hidden="true">↗</span></button>
+            <p id="composer-hint" class="visually-hidden">Enter to send. Shift + Enter for a new line.</p>
+            <div class="composer-controls">
+              <button id="retry-button" class="icon-action secondary-action" type="button" aria-label="Retry last question" hidden disabled>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18.3 8.3A7 7 0 1 0 19 14"/><path d="M18.3 4.8v3.5h-3.5"/></svg>
+              </button>
+              <button id="stop-button" class="icon-action stop-action" type="button" aria-label="Stop generating" hidden disabled>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="8" y="8" width="8" height="8" rx="1"/></svg>
+              </button>
+              <button id="send-button" class="icon-action send-action" type="submit" aria-label="Send message" disabled>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 18V6"/><path d="m7 11 5-5 5 5"/></svg>
+              </button>
             </div>
           </div>
         </form>
