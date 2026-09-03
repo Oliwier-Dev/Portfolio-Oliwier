@@ -6,8 +6,8 @@
   <meta name="description" content="Northline Cycle Works is a self-initiated multi-page bicycle restoration website concept by Oliwier Mako.">
   <meta name="theme-color" content="#ffffff">
   <title>Northline Cycle Works — Website concept by Oliwier Mako</title>
-  <link rel="stylesheet" href="./northline.css?v=20260903">
-  <script src="./northline.js?v=20260903" defer></script>
+  <link rel="stylesheet" href="./northline.css?v=20260903b">
+  <script src="./northline.js?v=20260903b" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -31,12 +31,22 @@
         <div><strong>Fit &amp; setup</strong><span>Dialed geometry for the way you ride.</span></div>
       </div>
     </section>
-    <section class="nl-section">
-      <div class="section-heading reveal"><h2>Nothing added without a reason.</h2><p>Northline treats restoration as one connected system: preserve the character, rebuild the function, and make every detail useful again.</p></div>
-      <div class="image-story reveal">
-        <figure><picture><source srcset="/images/northline/frame-detail.avif" type="image/avif"><img src="/images/northline/frame-detail.jpg" alt="Forest-green bicycle head tube and polished front brake detail" width="1672" height="941" loading="lazy"></picture><figcaption><span>Frame and component detail</span><span>Precision at every contact point</span></figcaption></figure>
-        <figure><picture><source srcset="/images/northline/workshop-clean.avif" type="image/avif"><img src="/images/northline/workshop-clean.jpg" alt="Clean bicycle restoration workshop with a green frame on a stand" width="1536" height="1024" loading="lazy"></picture><figcaption><span>Workshop</span><span>Clear bench, clear decisions</span></figcaption></figure>
+    <section class="detail-story" aria-labelledby="detail-story-title" data-detail-story>
+      <div class="detail-story__intro">
+        <h2 id="detail-story-title">The rebuild,<em>up close.</em></h2>
+        <p>Northline treats restoration as one connected system: preserve the character, rebuild the function, and make every detail useful again.</p>
       </div>
+      <div class="detail-story__stage">
+        <figure class="detail-card detail-card--component">
+          <div class="detail-card__media"><picture><source srcset="/images/northline/frame-detail.avif" type="image/avif"><img src="/images/northline/frame-detail.jpg" alt="Forest-green bicycle head tube and polished front brake detail" width="1672" height="941" loading="lazy"></picture></div>
+          <figcaption><span>Frame and component detail</span><span>Precision at every contact point</span></figcaption>
+        </figure>
+        <figure class="detail-card detail-card--workshop">
+          <div class="detail-card__media"><picture><source srcset="/images/northline/workshop-clean.avif" type="image/avif"><img src="/images/northline/workshop-clean.jpg" alt="Clean bicycle restoration workshop with a green frame on a stand" width="1536" height="1024" loading="lazy"></picture></div>
+          <figcaption><span>Workshop</span><span>Clear bench, clear decisions</span></figcaption>
+        </figure>
+      </div>
+      <p class="detail-story__note">Good restoration is quiet. The evidence is in the alignment, the finish, and the way everything works together.</p>
     </section>
     <section class="nl-section statement"><div><p class="reveal">A bicycle should leave the workshop feeling familiar—only <em>better resolved.</em></p><a class="nl-link" href="./services.html">See the restoration process <span aria-hidden="true">↗</span></a></div></section>
     <section class="contact-band"><h2>Bring the next ride back into focus.</h2><a href="./contact.html">Start a restoration <span aria-hidden="true">↗</span></a></section>

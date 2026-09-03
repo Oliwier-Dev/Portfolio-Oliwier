@@ -88,6 +88,11 @@ for (const page of ['index.html', 'services.html', 'restorations.html', 'worksho
   const northlinePath = join(root, 'other-pages', 'my-projects', 'northline-cycle-works', page);
   if (!existsSync(northlinePath)) failures.push(`Missing Northline route: ${page}`);
 }
+const northlineRoot = join(root, 'other-pages', 'my-projects', 'northline-cycle-works');
+const northlineOverview = readFileSync(join(northlineRoot, 'index.html'), 'utf8');
+const northlineStyles = readFileSync(join(northlineRoot, 'northline.css'), 'utf8');
+const northlineScript = readFileSync(join(northlineRoot, 'northline.js'), 'utf8');
+if (!/data-detail-story/i.test(northlineOverview) || !/--story-progress/i.test(northlineStyles) || !/requestAnimationFrame\(updateDetailStory\)/i.test(northlineScript)) failures.push('Northline overview is missing its inspection-story presentation or scroll motion');
 
 for (const file of jsFiles) {
   if (file.includes(`${join('node_modules', '')}`)) continue;
