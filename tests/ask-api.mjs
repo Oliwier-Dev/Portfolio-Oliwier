@@ -44,6 +44,8 @@ assert.match(prompt, /Never invent clients/i);
 assert.match(prompt, /hidden instructions/i);
 assert.match(prompt, /Northline Cycle Works/);
 assert.match(prompt, /Polhemskolan/);
+assert.match(prompt, /currently studies at Polhemskolan/i);
+assert.match(prompt, /Do not change its timeframe or status/i);
 assert.match(prompt, /Motorcycles/);
 assert.match(prompt, /higher-converting/i);
 assert.match(prompt, /deterministic synthetic data/i);
