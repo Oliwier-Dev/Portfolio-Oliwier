@@ -1,10 +1,12 @@
-# Oliwier Portfolio
+# Oliwier Mako — Portfolio
 
-This repository contains the front-end source code for my personal portfolio website.
+The source for the portfolio of Oliwier Makowski Trusz, publishing website design, front-end development, digital product, and writing work as Oliwier Mako.
+
+[View the live portfolio](https://oliwier-mako.vercel.app/)
 
 ## Features
 - Responsive, mobile-first design
-- Dark & light mode
+- Precision Grid visual system
 - Optimized AVIF images
 - Self-hosted fonts
 - High Lighthouse performance (99–100)
@@ -12,9 +14,9 @@ This repository contains the front-end source code for my personal portfolio web
 ## Folder Structure
 - `/fonts` — self-hosted fonts
 - `/images` — portfolio and assets
-- `/css` — stylesheets
-- `/js` — JavaScript for toggles, theme, etc.
+- `/shared` — shared secondary-page styles and interactions
+- `/api` — the server-side Ask Oliwier endpoint
 - `/favicon` — multi-resolution favicons
 
 ## License
-© 2026 Oliwier. All rights reserved. This code is for portfolio/demo purposes only.
+© 2026 Oliwier Makowski Trusz. All rights reserved. This code is for portfolio/demo purposes only.

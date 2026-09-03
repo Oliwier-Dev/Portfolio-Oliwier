@@ -7,6 +7,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ignoredDirs = new Set(['node_modules', '.git']);
 const htmlFiles = [];
 const jsFiles = [];
+const siteOrigin = 'https://oliwier-mako.vercel.app';
 
 function walk(directory) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
@@ -20,6 +21,8 @@ function walk(directory) {
 
 walk(root);
 const failures = [];
+const canonicalUrls = new Set();
+const indexableUrls = new Set();
 
 if (htmlFiles.length !== 17) failures.push(`Expected 17 HTML pages, found ${htmlFiles.length}`);
 
@@ -28,6 +31,23 @@ for (const file of htmlFiles) {
   const label = relative(root, file);
   if (!/<title>[^<]+<\/title>/i.test(source)) failures.push(`${label}: missing title`);
   if (!/<meta\s+name=["']description["'][^>]+content=["'][^"']+/i.test(source)) failures.push(`${label}: missing meta description`);
+  if (!/<meta\s+name=["']author["'][^>]+content=["']Oliwier Makowski Trusz["']/i.test(source)) failures.push(`${label}: missing canonical author identity`);
+
+  const canonical = source.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i)?.[1];
+  if (!canonical?.startsWith(`${siteOrigin}/`)) failures.push(`${label}: missing absolute production canonical`);
+  else if (canonicalUrls.has(canonical)) failures.push(`${label}: duplicate canonical ${canonical}`);
+  else canonicalUrls.add(canonical);
+
+  const robots = source.match(/<meta\s+name=["']robots["']\s+content=["']([^"']+)["']/i)?.[1] || '';
+  if (!/noindex/i.test(robots) && canonical) indexableUrls.add(canonical);
+
+  for (const match of source.matchAll(/<script\s+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      JSON.parse(match[1]);
+    } catch {
+      failures.push(`${label}: invalid JSON-LD`);
+    }
+  }
 
   const ids = [...source.matchAll(/\sid=["']([^"']+)["']/gi)].map((match) => match[1]);
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -53,6 +73,25 @@ for (const pattern of [/\b(?:1[5-9]|twenty)[- ]?(?:year|years)[- ]?old\b/gi, /cd
 const home = readFileSync(join(root, 'index.html'), 'utf8');
 for (const required of ['Northline Cycle Works', 'Ask Oliwier', 'https://www.instagram.com/oliwiermako/']) {
   if (!home.includes(required)) failures.push(`Homepage missing required content: ${required}`);
+}
+for (const required of ['Oliwier Makowski Trusz', 'Oliwier Mako', '"@type": "ProfilePage"', '"@type": "Person"']) {
+  if (!home.includes(required)) failures.push(`Homepage missing branded SEO signal: ${required}`);
+}
+if (!/<span class="hero-name hero-name--first">Oliwier<\/span>\s+<span class="hero-name hero-name--last">Mako<\/span>/i.test(home)) failures.push('Homepage name does not preserve a searchable word boundary');
+
+const robotsPath = join(root, 'robots.txt');
+const sitemapPath = join(root, 'sitemap.xml');
+const llmsPath = join(root, 'llms.txt');
+if (!existsSync(robotsPath) || !existsSync(sitemapPath) || !existsSync(llmsPath)) failures.push('Missing robots.txt, sitemap.xml, or llms.txt discovery surface');
+else {
+  const robotsSource = readFileSync(robotsPath, 'utf8');
+  const sitemapSource = readFileSync(sitemapPath, 'utf8');
+  const llmsSource = readFileSync(llmsPath, 'utf8');
+  if (!robotsSource.includes(`Sitemap: ${siteOrigin}/sitemap.xml`) || !/Disallow:\s*\/api\//i.test(robotsSource)) failures.push('robots.txt is missing its sitemap declaration or API exclusion');
+  const sitemapUrls = new Set([...sitemapSource.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
+  for (const url of indexableUrls) if (!sitemapUrls.has(url)) failures.push(`sitemap.xml missing indexable canonical: ${url}`);
+  for (const url of sitemapUrls) if (!indexableUrls.has(url)) failures.push(`sitemap.xml exposes a noindex or unknown URL: ${url}`);
+  if (!llmsSource.includes('Oliwier Makowski Trusz') || !llmsSource.includes('Oliwier Mako')) failures.push('llms.txt is missing the full-name/public-name identity link');
 }
 
 const workIndex = readFileSync(join(root, 'other-pages', 'my-projects', 'index.html'), 'utf8');

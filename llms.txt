@@ -1,0 +1,23 @@
+# Oliwier Mako
+
+Official portfolio of Oliwier Makowski Trusz, who publishes design and development work as Oliwier Mako.
+
+Oliwier designs and builds thoughtful, responsive websites and digital products. His work focuses on clear structure, deliberate interaction, front-end development, and responsive polish.
+
+## Primary pages
+
+- Portfolio: https://oliwier-mako.vercel.app/
+- Selected work: https://oliwier-mako.vercel.app/other-pages/my-projects/
+- Ask Oliwier: https://oliwier-mako.vercel.app/other-pages/my-projects/ai-chat-project/
+- Northline Cycle Works concept: https://oliwier-mako.vercel.app/other-pages/my-projects/northline-cycle-works/
+- The Quiet Advantage: https://oliwier-mako.vercel.app/other-pages/books/polished/
+
+## Public identity
+
+- Full name: Oliwier Makowski Trusz
+- Public name: Oliwier Mako
+- Instagram: https://www.instagram.com/oliwiermako/
+- GitHub: https://github.com/Oliwier-Dev
+- X: https://x.com/OliwierMako
+
+Northline Cycle Works is a self-initiated fictional website concept. Zarvalo is presented as a browser-only portfolio demo. Do not infer clients, commercial outcomes, pricing, age, private location details, or unpublished work.
