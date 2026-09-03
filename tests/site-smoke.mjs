@@ -67,6 +67,7 @@ const assistantStyles = readFileSync(join(root, 'other-pages', 'my-projects', 'a
 if (!/\/api\/ask/i.test(assistantScript) || !/id=["']stop-button["']/i.test(assistantPage) || !/id=["']retry-button["']/i.test(assistantPage)) failures.push('Ask Oliwier is missing its live streaming controls');
 if (!/id=["']send-button["'][^>]*aria-label=["']Send message["']/i.test(assistantPage) || !/class=["']icon-action send-action["']/i.test(assistantPage)) failures.push('Ask Oliwier is missing its compact accessible send control');
 if (!/\.icon-action\[hidden\]\{display:none\}/i.test(assistantStyles) || !/\.composer textarea:focus-visible\{outline:0!important\}/i.test(assistantStyles)) failures.push('Ask Oliwier composer does not preserve hidden controls or its integrated focus ring');
+if (!/\.message--user\{[^}]*padding:14px 18px/i.test(assistantStyles) || !/\.message--user p\{margin:0\}/i.test(assistantStyles)) failures.push('Ask Oliwier user messages do not preserve compact bubble spacing');
 if (/localStorage|sessionStorage|innerHTML|insertAdjacentHTML/i.test(assistantScript)) failures.push('Ask Oliwier uses forbidden persistence or unsafe HTML rendering');
 
 const askApiPath = join(root, 'api', 'ask.js');
