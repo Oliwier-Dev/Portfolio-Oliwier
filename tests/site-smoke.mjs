@@ -14,7 +14,7 @@ function walk(directory) {
     if (ignoredDirs.has(entry.name)) continue;
     const fullPath = join(directory, entry.name);
     if (entry.isDirectory()) walk(fullPath);
-    if (entry.isFile() && extname(entry.name) === '.html') htmlFiles.push(fullPath);
+    if (entry.isFile() && extname(entry.name) === '.html' && !/^google[a-z0-9]+\.html$/i.test(entry.name)) htmlFiles.push(fullPath);
     if (entry.isFile() && extname(entry.name) === '.js') jsFiles.push(fullPath);
   }
 }
@@ -82,6 +82,8 @@ if (!/<span class="hero-name hero-name--first">Oliwier<\/span>\s+<span class="he
 const robotsPath = join(root, 'robots.txt');
 const sitemapPath = join(root, 'sitemap.xml');
 const llmsPath = join(root, 'llms.txt');
+const googleVerificationFiles = readdirSync(root).filter((name) => /^google[a-z0-9]+\.html$/i.test(name));
+if (googleVerificationFiles.length !== 1) failures.push(`Expected one Google verification file, found ${googleVerificationFiles.length}`);
 if (!existsSync(robotsPath) || !existsSync(sitemapPath) || !existsSync(llmsPath)) failures.push('Missing robots.txt, sitemap.xml, or llms.txt discovery surface');
 else {
   const robotsSource = readFileSync(robotsPath, 'utf8');
