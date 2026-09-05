@@ -66,7 +66,7 @@ const portfolioSources = htmlFiles
   .map((file) => readFileSync(file, 'utf8'))
   .join('\n');
 
-for (const pattern of [/\b(?:1[5-9]|twenty)[- ]?(?:year|years)[- ]?old\b/gi, /cdn\.tailwindcss\.com/gi, /network-background/gi, /switchThemeBtn/gi, /oliwier_mako/gi, /vellaro/gi]) {
+for (const pattern of [/\b(?:1[5-9]|twenty)[- ]?(?:year|years)[- ]?old\b/gi, /cdn\.tailwindcss\.com/gi, /network-background/gi, /switchThemeBtn/gi, /oliwier_mako/gi, /vellaro/gi, /https?:\/\/(?:www\.)?x\.com\/OliwierMako/gi]) {
   if (pattern.test(portfolioSources)) failures.push(`Forbidden active-page pattern: ${pattern}`);
 }
 
@@ -94,6 +94,7 @@ else {
   for (const url of indexableUrls) if (!sitemapUrls.has(url)) failures.push(`sitemap.xml missing indexable canonical: ${url}`);
   for (const url of sitemapUrls) if (!indexableUrls.has(url)) failures.push(`sitemap.xml exposes a noindex or unknown URL: ${url}`);
   if (!llmsSource.includes('Oliwier Makowski Trusz') || !llmsSource.includes('Oliwier Mako')) failures.push('llms.txt is missing the full-name/public-name identity link');
+  if (/https?:\/\/(?:www\.)?x\.com\/OliwierMako/i.test(llmsSource)) failures.push('llms.txt exposes the removed X account');
 }
 
 const workIndex = readFileSync(join(root, 'other-pages', 'my-projects', 'index.html'), 'utf8');
